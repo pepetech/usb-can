@@ -24,17 +24,7 @@
 #ifndef _MCP2515DFS_H_
 #define _MCP2515DFS_H_
 
-#include <Arduino.h>
-#include <SPI.h>
-#include <inttypes.h>
-
-#ifndef INT32U
-#define INT32U unsigned long
-#endif
-
-#ifndef INT8U
-#define INT8U byte
-#endif
+#include <stdint.h>
 
 // if print debug information
 #define DEBUG_MODE 1
@@ -249,7 +239,7 @@
 /*
  *  Speed 8M
  */
-#define MCP_8MHz_1000kBPS_CFG1 (0x00)  
+#define MCP_8MHz_1000kBPS_CFG1 (0x00)
 #define MCP_8MHz_1000kBPS_CFG2 (0xC0)  /* Enabled SAM bit     */
 #define MCP_8MHz_1000kBPS_CFG3 (0x80)  /* Sample point at 75% */
 
@@ -406,9 +396,6 @@
 
 #define MCP_RXBUF_0 (MCP_RXB0SIDH)
 #define MCP_RXBUF_1 (MCP_RXB1SIDH)
-
-#define MCP2515_SELECT()   digitalWrite(MCPCS, LOW)
-#define MCP2515_UNSELECT() digitalWrite(MCPCS, HIGH)
 
 #define MCP2515_OK         (0)
 #define MCP2515_FAIL       (1)

@@ -1,6 +1,6 @@
 /**
  *    Copyright 2012, Kerry D. Wong
- * 
+ *
  *      http://www.kerrywong.com
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,6 +17,7 @@
  */
 
 #include "mcp2210.h"
+#include "mcp2515.h"
 
 using namespace std;
 
@@ -53,17 +54,17 @@ void TestMCP3204(hid_device* handle) {
         printf("Errror setting SPI parameters.\n");
         return;
     }
-    
+
     byte spiCmdBuffer[4];
 
     //query ch0
     spiCmdBuffer[0] = 0x06; //00000110B (start, single ended, ch2)
     spiCmdBuffer[1] = 0x00; //(ch1 ch0)
-    
-    SPIDataTransferStatusDef def1 = SPISendReceive(handle, spiCmdBuffer, 3);   
-    
-    unsigned int val = ((def1.DataReceived[1] & 0xF) <<8) | def1.DataReceived[2];   
-    
+
+    SPIDataTransferStatusDef def1 = SPISendReceive(handle, spiCmdBuffer, 3);
+
+    unsigned int val = ((def1.DataReceived[1] & 0xF) <<8) | def1.DataReceived[2];
+
     printf("%3.2f\n", val/4096.0*2.5*2);
 }
 
@@ -115,7 +116,7 @@ void Test25LC020A(hid_device* handle) {
         return;
     }
 
-    spiCmdBuffer[0] = 0x02; //0000 0010 write    
+    spiCmdBuffer[0] = 0x02; //0000 0010 write
     spiCmdBuffer[1] = 0x00; //address 0x00
 
     for (int i = 1; i <= 8; i++) {
@@ -260,7 +261,7 @@ void TestMCP23S08(hid_device* handle) {
 }
 
 /**
- * Test GPIO 
+ * Test GPIO
  * Generate a rectangular wave on GP0
  */
 void TestGPIO(hid_device* handle) {
@@ -334,14 +335,23 @@ int main(int argc, char** argv) {
         exit(-1);
     }
 
+    MCP_CAN *mcp2515 = new MCP_CAN(handle);
+
+    mcp2515.begin();
+
+    while(1)
+    {
+        
+    }
+
     /**
      * Uncomment each line to test the
      * corresponding device.
      */
-    
+
     //TestGPIO(handle);
     //TestMCP23S08(handle);
-    TestTC77(handle);
+    //TestTC77(handle);
     //Test25LC020A(handle);
     //TestMCP3204(handle);
 

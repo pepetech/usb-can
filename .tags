@@ -1,0 +1,569 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+HIDIOCSFEATURE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^#define HIDIOCSFEATURE(/;"	macro	line:51	file:
+HIDIOCGFEATURE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^#define HIDIOCGFEATURE(/;"	macro	line:54	file:
+device_string_names	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^const char *device_string_names[] = {$/;"	variable	line:59
+device_string_id	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^enum device_string_id {$/;"	enum	line:66	file:
+DEVICE_STRING_MANUFACTURER	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^	DEVICE_STRING_MANUFACTURER,$/;"	enumerator	line:67	enum:device_string_id	file:
+DEVICE_STRING_PRODUCT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^	DEVICE_STRING_PRODUCT,$/;"	enumerator	line:68	enum:device_string_id	file:
+DEVICE_STRING_SERIAL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^	DEVICE_STRING_SERIAL,$/;"	enumerator	line:69	enum:device_string_id	file:
+DEVICE_STRING_COUNT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^	DEVICE_STRING_COUNT,$/;"	enumerator	line:71	enum:device_string_id	file:
+hid_device_	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^struct hid_device_ {$/;"	struct	line:74	file:
+device_handle	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^	int device_handle;$/;"	member	line:75	struct:hid_device_	file:
+blocking	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^	int blocking;$/;"	member	line:76	struct:hid_device_	file:
+uses_numbered_reports	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^	int uses_numbered_reports;$/;"	member	line:77	struct:hid_device_	file:
+kernel_version	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^static __u32 kernel_version = 0;$/;"	variable	line:81	file:
+new_hid_device	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^hid_device *new_hid_device()$/;"	function	line:83
+register_error	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^static void register_error(hid_device *device, const char *op)$/;"	function	line:93	file:	signature:(hid_device *device, const char *op)
+utf8_to_wchar_t	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^static wchar_t *utf8_to_wchar_t(const char *utf8)$/;"	function	line:99	file:	signature:(const char *utf8)
+copy_udev_string	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^static wchar_t *copy_udev_string(struct udev_device *dev, const char *udev_name)$/;"	function	line:118	file:	signature:(struct udev_device *dev, const char *udev_name)
+uses_numbered_reports	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^static int uses_numbered_reports(__u8 *report_descriptor, __u32 size) {$/;"	function	line:125	file:	signature:(__u8 *report_descriptor, __u32 size)
+parse_uevent_info	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^parse_uevent_info(const char *uevent, int *bus_type,$/;"	function	line:190	signature:(const char *uevent, int *bus_type, unsigned short *vendor_id, unsigned short *product_id, char **serial_number_utf8, char **product_name_utf8)
+get_device_string	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^static int get_device_string(hid_device *dev, enum device_string_id key, wchar_t *string, size_t maxlen)$/;"	function	line:243	file:	signature:(hid_device *dev, enum device_string_id key, wchar_t *string, size_t maxlen)
+hid_init	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^int HID_API_EXPORT hid_init(void)$/;"	function	line:341	signature:(void)
+hid_exit	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^int HID_API_EXPORT hid_exit(void)$/;"	function	line:353	signature:(void)
+hid_enumerate	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^struct hid_device_info  HID_API_EXPORT *hid_enumerate(unsigned short vendor_id, unsigned short product_id)$/;"	function	line:360	signature:(unsigned short vendor_id, unsigned short product_id)
+hid_free_enumeration	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^void  HID_API_EXPORT hid_free_enumeration(struct hid_device_info *devs)$/;"	function	line:548	signature:(struct hid_device_info *devs)
+hid_open	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^hid_device * hid_open(unsigned short vendor_id, unsigned short product_id, const wchar_t *serial_number)$/;"	function	line:562	signature:(unsigned short vendor_id, unsigned short product_id, const wchar_t *serial_number)
+hid_open_path	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^hid_device * HID_API_EXPORT hid_open_path(const char *path)$/;"	function	line:597	signature:(const char *path)
+hid_write	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^int HID_API_EXPORT hid_write(hid_device *dev, const unsigned char *data, size_t length)$/;"	function	line:660	signature:(hid_device *dev, const unsigned char *data, size_t length)
+hid_read_timeout	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^int HID_API_EXPORT hid_read_timeout(hid_device *dev, unsigned char *data, size_t length, int milliseconds)$/;"	function	line:670	signature:(hid_device *dev, unsigned char *data, size_t length, int milliseconds)
+hid_read	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^int HID_API_EXPORT hid_read(hid_device *dev, unsigned char *data, size_t length)$/;"	function	line:705	signature:(hid_device *dev, unsigned char *data, size_t length)
+hid_set_nonblocking	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^int HID_API_EXPORT hid_set_nonblocking(hid_device *dev, int nonblock)$/;"	function	line:710	signature:(hid_device *dev, int nonblock)
+hid_send_feature_report	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^int HID_API_EXPORT hid_send_feature_report(hid_device *dev, const unsigned char *data, size_t length)$/;"	function	line:734	signature:(hid_device *dev, const unsigned char *data, size_t length)
+hid_get_feature_report	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^int HID_API_EXPORT hid_get_feature_report(hid_device *dev, unsigned char *data, size_t length)$/;"	function	line:745	signature:(hid_device *dev, unsigned char *data, size_t length)
+hid_close	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^void HID_API_EXPORT hid_close(hid_device *dev)$/;"	function	line:758	signature:(hid_device *dev)
+hid_get_manufacturer_string	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^int HID_API_EXPORT_CALL hid_get_manufacturer_string(hid_device *dev, wchar_t *string, size_t maxlen)$/;"	function	line:767	signature:(hid_device *dev, wchar_t *string, size_t maxlen)
+hid_get_product_string	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^int HID_API_EXPORT_CALL hid_get_product_string(hid_device *dev, wchar_t *string, size_t maxlen)$/;"	function	line:772	signature:(hid_device *dev, wchar_t *string, size_t maxlen)
+hid_get_serial_number_string	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^int HID_API_EXPORT_CALL hid_get_serial_number_string(hid_device *dev, wchar_t *string, size_t maxlen)$/;"	function	line:777	signature:(hid_device *dev, wchar_t *string, size_t maxlen)
+hid_get_indexed_string	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^int HID_API_EXPORT_CALL hid_get_indexed_string(hid_device *dev, int string_index, wchar_t *string, size_t maxlen)$/;"	function	line:782	signature:(hid_device *dev, int string_index, wchar_t *string, size_t maxlen)
+hid_error	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hid.c	/^HID_API_EXPORT const wchar_t * HID_API_CALL  hid_error(hid_device *dev)$/;"	function	line:788	signature:(hid_device *dev)
+HIDAPI_H__	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^#define HIDAPI_H__$/;"	macro	line:28
+HID_API_EXPORT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^      #define HID_API_EXPORT /;"	macro	line:33
+HID_API_CALL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^      #define HID_API_CALL$/;"	macro	line:34
+HID_API_EXPORT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^      #define HID_API_EXPORT /;"	macro	line:36
+HID_API_CALL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^      #define HID_API_CALL /;"	macro	line:37
+HID_API_EXPORT_CALL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^#define HID_API_EXPORT_CALL /;"	macro	line:40
+hid_device	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^		typedef struct hid_device_ hid_device; \/**< opaque hidapi structure *\/$/;"	typedef	line:46	typeref:struct:hid_device_
+hid_device_info	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^		struct hid_device_info {$/;"	struct	line:49
+path	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^			char *path;$/;"	member	line:51	struct:hid_device_info
+vendor_id	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^			unsigned short vendor_id;$/;"	member	line:53	struct:hid_device_info
+product_id	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^			unsigned short product_id;$/;"	member	line:55	struct:hid_device_info
+serial_number	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^			wchar_t *serial_number;$/;"	member	line:57	struct:hid_device_info
+release_number	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^			unsigned short release_number;$/;"	member	line:60	struct:hid_device_info
+manufacturer_string	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^			wchar_t *manufacturer_string;$/;"	member	line:62	struct:hid_device_info
+product_string	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^			wchar_t *product_string;$/;"	member	line:64	struct:hid_device_info
+usage_page	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^			unsigned short usage_page;$/;"	member	line:67	struct:hid_device_info
+usage	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^			unsigned short usage;$/;"	member	line:70	struct:hid_device_info
+interface_number	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^			int interface_number;$/;"	member	line:75	struct:hid_device_info
+next	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\hidapi.h	/^			struct hid_device_info *next;$/;"	member	line:78	struct:hid_device_info	typeref:struct:hid_device_info::hid_device_info
+SendUSBCmd	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^int SendUSBCmd(hid_device *handle, byte *cmdBuf, byte *responseBuf) {$/;"	function	line:23	signature:(hid_device *handle, byte *cmdBuf, byte *responseBuf)
+GetSPITransferSettings	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^SPITransferSettingsDef GetSPITransferSettings(hid_device *handle, bool isVolatile) {$/;"	function	line:50	signature:(hid_device *handle, bool isVolatile)
+SetSPITransferSettings	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^int SetSPITransferSettings(hid_device *handle, SPITransferSettingsDef def, bool isVolatile) {$/;"	function	line:84	signature:(hid_device *handle, SPITransferSettingsDef def, bool isVolatile)
+GetChipSettings	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^ChipSettingsDef GetChipSettings(hid_device *handle, bool isVolatile) {$/;"	function	line:126	signature:(hid_device *handle, bool isVolatile)
+SetChipSettings	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^int SetChipSettings(hid_device *handle, ChipSettingsDef def, bool isVolatile) {$/;"	function	line:172	signature:(hid_device *handle, ChipSettingsDef def, bool isVolatile)
+GetUSBKeyParameters	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^USBKeyParametersDef GetUSBKeyParameters(hid_device *handle) {$/;"	function	line:209	signature:(hid_device *handle)
+SetUSBKeyParameters	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^int SetUSBKeyParameters(hid_device *handle, USBKeyParametersDef def) {$/;"	function	line:237	signature:(hid_device *handle, USBKeyParametersDef def)
+GetManufacturerProductName	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^ManufacturerProductNameDef GetManufacturerProductName(hid_device *handle, unsigned int subCmdCode) {$/;"	function	line:260	signature:(hid_device *handle, unsigned int subCmdCode)
+SetManufacturerProductName	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^int SetManufacturerProductName(hid_device *handle, unsigned int subCmdCode, ManufacturerProductNameDef def) {$/;"	function	line:287	signature:(hid_device *handle, unsigned int subCmdCode, ManufacturerProductNameDef def)
+SendAccessPassword	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^int SendAccessPassword(hid_device *handle, char *pwd, int pwdLength) {$/;"	function	line:306	signature:(hid_device *handle, char *pwd, int pwdLength)
+ReadEEPROM	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^int ReadEEPROM(hid_device *handle, byte addr, byte* val) {$/;"	function	line:321	signature:(hid_device *handle, byte addr, byte* val)
+WriteEEPROM	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^int WriteEEPROM(hid_device *handle, byte addr, byte val) {$/;"	function	line:341	signature:(hid_device *handle, byte addr, byte val)
+RequestSPIBusRelease	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^int RequestSPIBusRelease(hid_device *handle, byte val) {$/;"	function	line:355	signature:(hid_device *handle, byte val)
+GetChipStatus	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^ChipStatusDef GetChipStatus(hid_device *handle) {$/;"	function	line:368	signature:(hid_device *handle)
+CancelSPITransfer	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^ChipStatusDef CancelSPITransfer(hid_device *handle) {$/;"	function	line:393	signature:(hid_device *handle)
+SPIDataTransfer	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^SPIDataTransferStatusDef SPIDataTransfer(hid_device *handle, byte* data, int length) {$/;"	function	line:418	signature:(hid_device *handle, byte* data, int length)
+SPISendReceive	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^SPIDataTransferStatusDef SPISendReceive(hid_device *handle, byte* data, int cmdBufferLength, int dataLength) {$/;"	function	line:447	signature:(hid_device *handle, byte* data, int cmdBufferLength, int dataLength)
+GetNumOfEventsFromInterruptPin	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^ExternalInterruptPinStatusDef GetNumOfEventsFromInterruptPin(hid_device *handle, byte resetCounter) {$/;"	function	line:460	signature:(hid_device *handle, byte resetCounter)
+GetGPIOPinDirection	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^GPPinDef GetGPIOPinDirection(hid_device *handle) {$/;"	function	line:482	signature:(hid_device *handle)
+SetGPIOPinDirection	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^int SetGPIOPinDirection(hid_device *handle, GPPinDef def) {$/;"	function	line:507	signature:(hid_device *handle, GPPinDef def)
+GetGPIOPinValue	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^GPPinDef GetGPIOPinValue(hid_device *handle) {$/;"	function	line:525	signature:(hid_device *handle)
+SetGPIOPinVal	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^int SetGPIOPinVal(hid_device *handle, GPPinDef def) {$/;"	function	line:550	signature:(hid_device *handle, GPPinDef def)
+EnumerateMCP2210	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^hid_device_info* EnumerateMCP2210() {$/;"	function	line:569	signature:()
+InitMCP2210	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^hid_device* InitMCP2210(unsigned short vid, unsigned short pid, wchar_t* serialNumber) {$/;"	function	line:573	signature:(unsigned short vid, unsigned short pid, wchar_t* serialNumber)
+InitMCP2210	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^hid_device* InitMCP2210(wchar_t* serialNumber) {$/;"	function	line:577	signature:(wchar_t* serialNumber)
+InitMCP2210	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^hid_device* InitMCP2210() {$/;"	function	line:581	signature:()
+ReleaseMCP2210	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.cpp	/^void ReleaseMCP2210(hid_device *handle) {$/;"	function	line:585	signature:(hid_device *handle)
+MCP2210_H	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define	MCP2210_H$/;"	macro	line:20
+byte	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^typedef uint8_t byte;$/;"	typedef	line:32
+MCP2210_VID	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define MCP2210_VID /;"	macro	line:34
+MCP2210_PID	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define MCP2210_PID /;"	macro	line:35
+GPIO_DIRECTION_OUTPUT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define GPIO_DIRECTION_OUTPUT /;"	macro	line:40
+GPIO_DIRECTION_INPUT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define GPIO_DIRECTION_INPUT /;"	macro	line:41
+GP_PIN_DESIGNATION_GPIO	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define GP_PIN_DESIGNATION_GPIO /;"	macro	line:48
+GP_PIN_DESIGNATION_CS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define GP_PIN_DESIGNATION_CS /;"	macro	line:49
+GP_PIN_DESIGNATION_DEDICATED	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define GP_PIN_DESIGNATION_DEDICATED /;"	macro	line:50
+REMOTE_WAKEUP_DISABLED	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define REMOTE_WAKEUP_DISABLED /;"	macro	line:51
+REMOTE_WAVEUP_ENABLED	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define REMOTE_WAVEUP_ENABLED /;"	macro	line:52
+COUNT_HIGH_PULSES	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define COUNT_HIGH_PULSES /;"	macro	line:53
+COUNT_LOW_PULSES	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define COUNT_LOW_PULSES /;"	macro	line:54
+COUNT_RISING_EDGES	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define COUNT_RISING_EDGES /;"	macro	line:55
+COUNT_FALLING_EDGES	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define COUNT_FALLING_EDGES /;"	macro	line:56
+NO_INTERRUPT_COUNTING	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define NO_INTERRUPT_COUNTING /;"	macro	line:57
+CHIP_SETTINGS_NOT_PROTECTED	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CHIP_SETTINGS_NOT_PROTECTED /;"	macro	line:58
+CHIP_SETTINGS_PROTECTED_BY_PWD	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CHIP_SETTINGS_PROTECTED_BY_PWD /;"	macro	line:59
+CHIP_SETTINGS_LOCKED	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CHIP_SETTINGS_LOCKED /;"	macro	line:60
+USB_STRING_DESCRIPTOR_ID	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define USB_STRING_DESCRIPTOR_ID /;"	macro	line:62
+CMD_UNSPOORTED	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_UNSPOORTED /;"	macro	line:64
+CMD_GET_CHIP_STATUS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_GET_CHIP_STATUS /;"	macro	line:65
+CMD_SPI_CANCEL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_SPI_CANCEL /;"	macro	line:66
+CMD_GET_NUM_EVENTS_FROM_INT_PIN	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_GET_NUM_EVENTS_FROM_INT_PIN /;"	macro	line:67
+CMD_GET_GPIO_SETTING	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_GET_GPIO_SETTING /;"	macro	line:68
+CMD_SET_GPIO_SETTING	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_SET_GPIO_SETTING /;"	macro	line:69
+CMD_SET_GPIO_PIN_VAL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_SET_GPIO_PIN_VAL /;"	macro	line:70
+CMD_GET_GPIO_PIN_VAL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_GET_GPIO_PIN_VAL /;"	macro	line:71
+CMD_SET_GPIO_PIN_DIR	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_SET_GPIO_PIN_DIR /;"	macro	line:72
+CMD_GET_GPIO_PIN_DIR	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_GET_GPIO_PIN_DIR /;"	macro	line:73
+CMD_SET_SPI_SETTING	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_SET_SPI_SETTING /;"	macro	line:74
+CMD_GET_SPI_SETTING	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_GET_SPI_SETTING /;"	macro	line:75
+CMD_SPI_TRANSFER	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_SPI_TRANSFER /;"	macro	line:76
+CMD_READ_EEPROM_MEM	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_READ_EEPROM_MEM /;"	macro	line:77
+CMD_WRITE_EEPROM_MEM	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_WRITE_EEPROM_MEM /;"	macro	line:78
+CMD_SET_NVRAM_PARAM	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_SET_NVRAM_PARAM /;"	macro	line:79
+CMD_GET_NVRAM_PARAM	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_GET_NVRAM_PARAM /;"	macro	line:80
+CMD_SEND_PASSWORD	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_SEND_PASSWORD /;"	macro	line:81
+CMD_SPI_BUS_RELEASE_REQ	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMD_SPI_BUS_RELEASE_REQ /;"	macro	line:82
+CMDSUB_SPI_POWERUP_XFER_SETTINGS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMDSUB_SPI_POWERUP_XFER_SETTINGS /;"	macro	line:84
+CMDSUB_POWERUP_CHIP_SETTINGS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMDSUB_POWERUP_CHIP_SETTINGS /;"	macro	line:85
+CMDSUB_USB_KEY_PARAMETERS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMDSUB_USB_KEY_PARAMETERS /;"	macro	line:86
+CMDSUB_USB_PRODUCT_NAME	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMDSUB_USB_PRODUCT_NAME /;"	macro	line:87
+CMDSUB_USB_MANUFACTURER_NAME	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define CMDSUB_USB_MANUFACTURER_NAME /;"	macro	line:88
+OPERATION_SUCCESSFUL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define OPERATION_SUCCESSFUL /;"	macro	line:90
+ERROR_UNABLE_TO_OPEN_DEVICE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define ERROR_UNABLE_TO_OPEN_DEVICE /;"	macro	line:91
+ERROR_UNABLE_TO_WRITE_TO_DEVICE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define ERROR_UNABLE_TO_WRITE_TO_DEVICE /;"	macro	line:92
+ERROR_UNABLE_TO_READ_FROM_DEVICE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define ERROR_UNABLE_TO_READ_FROM_DEVICE /;"	macro	line:93
+ERROR_INVALID_DEVICE_HANDLE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define ERROR_INVALID_DEVICE_HANDLE /;"	macro	line:94
+COMMAND_BUFFER_LENGTH	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define COMMAND_BUFFER_LENGTH /;"	macro	line:96
+RESPONSE_BUFFER_LENGTH	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define RESPONSE_BUFFER_LENGTH /;"	macro	line:97
+SPI_STATUS_FINISHED_NO_DATA_TO_SEND	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define SPI_STATUS_FINISHED_NO_DATA_TO_SEND /;"	macro	line:99
+SPI_STATUS_STARTED_NO_DATA_TO_RECEIVE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define SPI_STATUS_STARTED_NO_DATA_TO_RECEIVE /;"	macro	line:100
+SPI_STATUS_SUCCESSFUL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^#define SPI_STATUS_SUCCESSFUL /;"	macro	line:101
+GPPin	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^struct GPPin {$/;"	struct	line:106
+PinDesignation	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int PinDesignation;$/;"	member	line:113	struct:GPPin
+GPIOOutput	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int GPIOOutput;$/;"	member	line:120	struct:GPPin
+GPIODirection	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int GPIODirection;$/;"	member	line:127	struct:GPPin
+SPITransferSettingsDef	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^struct SPITransferSettingsDef {$/;"	struct	line:133
+BitRate	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned long BitRate;$/;"	member	line:137	struct:SPITransferSettingsDef
+IdleChipSelectValue	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int IdleChipSelectValue;$/;"	member	line:143	struct:SPITransferSettingsDef
+ActiveChipSelectValue	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int ActiveChipSelectValue;$/;"	member	line:149	struct:SPITransferSettingsDef
+CSToDataDelay	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int CSToDataDelay;$/;"	member	line:155	struct:SPITransferSettingsDef
+LastDataByteToCSDelay	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int LastDataByteToCSDelay;$/;"	member	line:161	struct:SPITransferSettingsDef
+SubsequentDataByteDelay	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int SubsequentDataByteDelay;$/;"	member	line:167	struct:SPITransferSettingsDef
+BytesPerSPITransfer	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int BytesPerSPITransfer;$/;"	member	line:172	struct:SPITransferSettingsDef
+SPIMode	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int SPIMode;$/;"	member	line:181	struct:SPITransferSettingsDef
+ErrorCode	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    int ErrorCode;$/;"	member	line:186	struct:SPITransferSettingsDef
+ChipSettingsDef	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^struct ChipSettingsDef {$/;"	struct	line:192
+GP	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    GPPin GP[9];$/;"	member	line:196	struct:ChipSettingsDef
+RemoteWakeUpEnabled	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int RemoteWakeUpEnabled;$/;"	member	line:203	struct:ChipSettingsDef
+DedicatedFunctionInterruptPinMode	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int DedicatedFunctionInterruptPinMode;$/;"	member	line:214	struct:ChipSettingsDef
+SPIBusReleaseMode	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int SPIBusReleaseMode;$/;"	member	line:222	struct:ChipSettingsDef
+NVRamChipParamAccessControl	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int NVRamChipParamAccessControl;$/;"	member	line:231	struct:ChipSettingsDef
+password	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    char password[8];$/;"	member	line:238	struct:ChipSettingsDef
+ErrorCode	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    int ErrorCode;$/;"	member	line:239	struct:ChipSettingsDef
+USBKeyParametersDef	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^struct USBKeyParametersDef {$/;"	struct	line:245
+VID	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int VID;$/;"	member	line:249	struct:USBKeyParametersDef
+PID	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int PID;$/;"	member	line:254	struct:USBKeyParametersDef
+HostPowered	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int HostPowered;$/;"	member	line:261	struct:USBKeyParametersDef
+SelfPowered	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int SelfPowered;$/;"	member	line:268	struct:USBKeyParametersDef
+RemoteWakeupCapable	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int RemoteWakeupCapable;$/;"	member	line:275	struct:USBKeyParametersDef
+RequestedCurrentAmountFromHost	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int RequestedCurrentAmountFromHost;$/;"	member	line:281	struct:USBKeyParametersDef
+ErrorCode	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    int ErrorCode;$/;"	member	line:286	struct:USBKeyParametersDef
+ManufacturerProductNameDef	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^struct ManufacturerProductNameDef {$/;"	struct	line:292
+USBStringDescriptorLength	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int USBStringDescriptorLength;$/;"	member	line:299	struct:ManufacturerProductNameDef
+USBStringDescriptorID	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int USBStringDescriptorID;$/;"	member	line:305	struct:ManufacturerProductNameDef
+ManufacturerProductName	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    char ManufacturerProductName[59];$/;"	member	line:310	struct:ManufacturerProductNameDef
+ErrorCode	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    int ErrorCode;$/;"	member	line:315	struct:ManufacturerProductNameDef
+ChipStatusDef	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^struct ChipStatusDef {$/;"	struct	line:321
+SPIBusReleaseExtReqStat	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int SPIBusReleaseExtReqStat;$/;"	member	line:328	struct:ChipStatusDef
+SPIBusCurrentOwner	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int SPIBusCurrentOwner;$/;"	member	line:337	struct:ChipStatusDef
+AttemptedPWDAccesses	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int AttemptedPWDAccesses;$/;"	member	line:343	struct:ChipStatusDef
+PasswordGuessed	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int PasswordGuessed;$/;"	member	line:351	struct:ChipStatusDef
+ErrorCode	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    int ErrorCode;$/;"	member	line:356	struct:ChipStatusDef
+SPIDataTransferStatusDef	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^struct SPIDataTransferStatusDef {$/;"	struct	line:362
+NumberOfBytesReceived	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int NumberOfBytesReceived;$/;"	member	line:366	struct:SPIDataTransferStatusDef
+SPIEngineStatus	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int SPIEngineStatus;$/;"	member	line:376	struct:SPIDataTransferStatusDef
+DataReceived	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned char DataReceived[60];$/;"	member	line:382	struct:SPIDataTransferStatusDef
+ErrorCode	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    int ErrorCode;$/;"	member	line:387	struct:SPIDataTransferStatusDef
+ExternalInterruptPinStatusDef	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^struct ExternalInterruptPinStatusDef {$/;"	struct	line:393
+InterruptEventCounter	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    unsigned int InterruptEventCounter;$/;"	member	line:397	struct:ExternalInterruptPinStatusDef
+ErrorCode	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    int ErrorCode;$/;"	member	line:402	struct:ExternalInterruptPinStatusDef
+GPPinDef	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^struct GPPinDef {$/;"	struct	line:408
+GP	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    GPPin GP[9];$/;"	member	line:413	struct:GPPinDef
+ErrorCode	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210.h	/^    int ErrorCode;$/;"	member	line:418	struct:GPPinDef
+TestMCP3204	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210test.cpp	/^void TestMCP3204(hid_device* handle) {$/;"	function	line:27	signature:(hid_device* handle)
+Test25LC020A	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210test.cpp	/^void Test25LC020A(hid_device* handle) {$/;"	function	line:74	signature:(hid_device* handle)
+TestTC77	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210test.cpp	/^void TestTC77(hid_device* handle) {$/;"	function	line:148	signature:(hid_device* handle)
+TestMCP23S08	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210test.cpp	/^void TestMCP23S08(hid_device* handle) {$/;"	function	line:203	signature:(hid_device* handle)
+TestGPIO	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210test.cpp	/^void TestGPIO(hid_device* handle) {$/;"	function	line:266	signature:(hid_device* handle)
+TestMisc	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210test.cpp	/^void TestMisc(hid_device* handle) {$/;"	function	line:302	signature:(hid_device* handle)
+main	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210test.cpp	/^int main(int argc, char** argv) {$/;"	function	line:324	signature:(int argc, char** argv)
+spi_readwrite	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^#define spi_readwrite /;"	macro	line:26	file:
+spi_read	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^#define spi_read(/;"	macro	line:27	file:
+mcp2515_reset	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^void MCP_CAN::mcp2515_reset(void)                                      $/;"	function	line:33	class:MCP_CAN	signature:(void)
+mcp2515_readRegister	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::mcp2515_readRegister(const INT8U address)                                                                     $/;"	function	line:47	class:MCP_CAN	signature:(const INT8U address)
+mcp2515_readRegisterS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^void MCP_CAN::mcp2515_readRegisterS(const INT8U address, INT8U values[], const INT8U n)$/;"	function	line:66	class:MCP_CAN	signature:(const INT8U address, INT8U values[], const INT8U n)
+mcp2515_setRegister	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^void MCP_CAN::mcp2515_setRegister(const INT8U address, const INT8U value)$/;"	function	line:85	class:MCP_CAN	signature:(const INT8U address, const INT8U value)
+mcp2515_setRegisterS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^void MCP_CAN::mcp2515_setRegisterS(const INT8U address, const INT8U values[], const INT8U n)$/;"	function	line:100	class:MCP_CAN	signature:(const INT8U address, const INT8U values[], const INT8U n)
+mcp2515_modifyRegister	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^void MCP_CAN::mcp2515_modifyRegister(const INT8U address, const INT8U mask, const INT8U data)$/;"	function	line:119	class:MCP_CAN	signature:(const INT8U address, const INT8U mask, const INT8U data)
+mcp2515_readStatus	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::mcp2515_readStatus(void)                             $/;"	function	line:135	class:MCP_CAN	signature:(void)
+setMode	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::setMode(const INT8U opMode)$/;"	function	line:151	class:MCP_CAN	signature:(const INT8U opMode)
+mcp2515_setCANCTRL_Mode	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::mcp2515_setCANCTRL_Mode(const INT8U newmode)$/;"	function	line:161	class:MCP_CAN	signature:(const INT8U newmode)
+mcp2515_configRate	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::mcp2515_configRate(const INT8U canSpeed, const INT8U canClock)            $/;"	function	line:180	class:MCP_CAN	signature:(const INT8U canSpeed, const INT8U canClock)
+mcp2515_initCANBuffers	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^void MCP_CAN::mcp2515_initCANBuffers(void)$/;"	function	line:451	class:MCP_CAN	signature:(void)
+mcp2515_init	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::mcp2515_init(const INT8U canIDMode, const INT8U canSpeed, const INT8U canClock)$/;"	function	line:493	class:MCP_CAN	signature:(const INT8U canIDMode, const INT8U canSpeed, const INT8U canClock)
+mcp2515_write_id	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^void MCP_CAN::mcp2515_write_id( const INT8U mcp_addr, const INT8U ext, const INT32U id )$/;"	function	line:600	class:MCP_CAN	signature:( const INT8U mcp_addr, const INT8U ext, const INT32U id )
+mcp2515_write_mf	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^void MCP_CAN::mcp2515_write_mf( const INT8U mcp_addr, const INT8U ext, const INT32U id )$/;"	function	line:632	class:MCP_CAN	signature:( const INT8U mcp_addr, const INT8U ext, const INT32U id )
+mcp2515_read_id	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^void MCP_CAN::mcp2515_read_id( const INT8U mcp_addr, INT8U* ext, INT32U* id )$/;"	function	line:665	class:MCP_CAN	signature:( const INT8U mcp_addr, INT8U* ext, INT32U* id )
+mcp2515_write_canMsg	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^void MCP_CAN::mcp2515_write_canMsg( const INT8U buffer_sidh_addr)$/;"	function	line:690	class:MCP_CAN	signature:( const INT8U buffer_sidh_addr)
+mcp2515_read_canMsg	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^void MCP_CAN::mcp2515_read_canMsg( const INT8U buffer_sidh_addr)        \/* read can msg                 *\/$/;"	function	line:708	class:MCP_CAN	signature:( const INT8U buffer_sidh_addr)
+mcp2515_getNextFreeTXBuf	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::mcp2515_getNextFreeTXBuf(INT8U *txbuf_n)                 \/* get Next free txbuf          *\/$/;"	function	line:732	class:MCP_CAN	signature:(INT8U *txbuf_n)
+MCP_CAN	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^MCP_CAN::MCP_CAN(INT8U _CS)$/;"	function	line:757	class:MCP_CAN	signature:(INT8U _CS)
+begin	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::begin(INT8U idmodeset, INT8U speedset, INT8U clockset)$/;"	function	line:768	class:MCP_CAN	signature:(INT8U idmodeset, INT8U speedset, INT8U clockset)
+init_Mask	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::init_Mask(INT8U num, INT8U ext, INT32U ulData)$/;"	function	line:784	class:MCP_CAN	signature:(INT8U num, INT8U ext, INT32U ulData)
+init_Mask	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::init_Mask(INT8U num, INT32U ulData)$/;"	function	line:824	class:MCP_CAN	signature:(INT8U num, INT32U ulData)
+init_Filt	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::init_Filt(INT8U num, INT8U ext, INT32U ulData)$/;"	function	line:868	class:MCP_CAN	signature:(INT8U num, INT8U ext, INT32U ulData)
+init_Filt	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::init_Filt(INT8U num, INT32U ulData)$/;"	function	line:932	class:MCP_CAN	signature:(INT8U num, INT32U ulData)
+setMsg	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::setMsg(INT32U id, INT8U rtr, INT8U ext, INT8U len, INT8U *pData)$/;"	function	line:1001	class:MCP_CAN	signature:(INT32U id, INT8U rtr, INT8U ext, INT8U len, INT8U *pData)
+clearMsg	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::clearMsg()$/;"	function	line:1018	class:MCP_CAN	signature:()
+sendMsg	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::sendMsg()$/;"	function	line:1035	class:MCP_CAN	signature:()
+sendMsgBuf	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::sendMsgBuf(INT32U id, INT8U ext, INT8U len, INT8U *buf)$/;"	function	line:1070	class:MCP_CAN	signature:(INT32U id, INT8U ext, INT8U len, INT8U *buf)
+sendMsgBuf	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::sendMsgBuf(INT32U id, INT8U len, INT8U *buf)$/;"	function	line:1084	class:MCP_CAN	signature:(INT32U id, INT8U len, INT8U *buf)
+readMsg	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::readMsg()$/;"	function	line:1105	class:MCP_CAN	signature:()
+readMsgBuf	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::readMsgBuf(INT32U *id, INT8U *ext, INT8U *len, INT8U buf[])$/;"	function	line:1133	class:MCP_CAN	signature:(INT32U *id, INT8U *ext, INT8U *len, INT8U buf[])
+readMsgBuf	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::readMsgBuf(INT32U *id, INT8U *len, INT8U buf[])$/;"	function	line:1151	class:MCP_CAN	signature:(INT32U *id, INT8U *len, INT8U buf[])
+checkReceive	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::checkReceive(void)$/;"	function	line:1175	class:MCP_CAN	signature:(void)
+checkError	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::checkError(void)$/;"	function	line:1189	class:MCP_CAN	signature:(void)
+getError	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::getError(void)$/;"	function	line:1203	class:MCP_CAN	signature:(void)
+errorCountRX	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::errorCountRX(void)                             $/;"	function	line:1212	class:MCP_CAN	signature:(void)
+errorCountTX	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::errorCountTX(void)                             $/;"	function	line:1221	class:MCP_CAN	signature:(void)
+enOneShotTX	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::enOneShotTX(void)                             $/;"	function	line:1230	class:MCP_CAN	signature:(void)
+disOneShotTX	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::disOneShotTX(void)                             $/;"	function	line:1243	class:MCP_CAN	signature:(void)
+abortTX	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::abortTX(void)                             $/;"	function	line:1256	class:MCP_CAN	signature:(void)
+setGPO	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::setGPO(INT8U data)$/;"	function	line:1271	class:MCP_CAN	signature:(INT8U data)
+getGPI	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.cpp	/^INT8U MCP_CAN::getGPI(void)$/;"	function	line:1282	class:MCP_CAN	signature:(void)
+_MCP2515_H_	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.h	/^#define _MCP2515_H_$/;"	macro	line:25
+MAX_CHAR_IN_MESSAGE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.h	/^#define MAX_CHAR_IN_MESSAGE /;"	macro	line:28
+MCP_CAN	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.h	/^class MCP_CAN$/;"	class	line:30
+m_nExtFlg	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.h	/^    INT8U   m_nExtFlg;                                                  \/\/ Identifier Type$/;"	member	line:34	class:MCP_CAN
+m_nID	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.h	/^    INT32U  m_nID;                                                      \/\/ CAN ID$/;"	member	line:36	class:MCP_CAN
+m_nDlc	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.h	/^    INT8U   m_nDlc;                                                     \/\/ Data Length Code$/;"	member	line:37	class:MCP_CAN
+m_nDta	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.h	/^    INT8U   m_nDta[MAX_CHAR_IN_MESSAGE];                            	\/\/ Data array$/;"	member	line:38	class:MCP_CAN
+m_nRtr	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.h	/^    INT8U   m_nRtr;                                                     \/\/ Remote request flag$/;"	member	line:39	class:MCP_CAN
+m_nfilhit	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.h	/^    INT8U   m_nfilhit;                                                  \/\/ The number of the filter that matched the message$/;"	member	line:40	class:MCP_CAN
+MCPCS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.h	/^    INT8U   MCPCS;                                                      \/\/ Chip Select pin number$/;"	member	line:41	class:MCP_CAN
+mcpMode	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515.h	/^    INT8U   mcpMode;                                                    \/\/ Mode to return to after configurations are performed.$/;"	member	line:42	class:MCP_CAN
+_MCP2515DFS_H_	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define _MCP2515DFS_H_$/;"	macro	line:25
+INT32U	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define INT32U /;"	macro	line:32
+INT8U	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define INT8U /;"	macro	line:36
+DEBUG_MODE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define DEBUG_MODE /;"	macro	line:40
+TIMEOUTVALUE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define TIMEOUTVALUE /;"	macro	line:45
+MCP_SIDH	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_SIDH /;"	macro	line:46
+MCP_SIDL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_SIDL /;"	macro	line:47
+MCP_EID8	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_EID8 /;"	macro	line:48
+MCP_EID0	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_EID0 /;"	macro	line:49
+MCP_TXB_EXIDE_M	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TXB_EXIDE_M /;"	macro	line:51
+MCP_DLC_MASK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_DLC_MASK /;"	macro	line:52
+MCP_RTR_MASK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RTR_MASK /;"	macro	line:53
+MCP_RXB_RX_ANY	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXB_RX_ANY /;"	macro	line:55
+MCP_RXB_RX_EXT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXB_RX_EXT /;"	macro	line:56
+MCP_RXB_RX_STD	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXB_RX_STD /;"	macro	line:57
+MCP_RXB_RX_STDEXT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXB_RX_STDEXT /;"	macro	line:58
+MCP_RXB_RX_MASK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXB_RX_MASK /;"	macro	line:59
+MCP_RXB_BUKT_MASK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXB_BUKT_MASK /;"	macro	line:60
+MCP_TXB_TXBUFE_M	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TXB_TXBUFE_M /;"	macro	line:65
+MCP_TXB_ABTF_M	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TXB_ABTF_M /;"	macro	line:66
+MCP_TXB_MLOA_M	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TXB_MLOA_M /;"	macro	line:67
+MCP_TXB_TXERR_M	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TXB_TXERR_M /;"	macro	line:68
+MCP_TXB_TXREQ_M	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TXB_TXREQ_M /;"	macro	line:69
+MCP_TXB_TXIE_M	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TXB_TXIE_M /;"	macro	line:70
+MCP_TXB_TXP10_M	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TXB_TXP10_M /;"	macro	line:71
+MCP_TXB_RTR_M	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TXB_RTR_M /;"	macro	line:73
+MCP_RXB_IDE_M	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXB_IDE_M /;"	macro	line:74
+MCP_RXB_RTR_M	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXB_RTR_M /;"	macro	line:75
+MCP_STAT_RXIF_MASK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_STAT_RXIF_MASK /;"	macro	line:77
+MCP_STAT_RX0IF	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_STAT_RX0IF /;"	macro	line:78
+MCP_STAT_RX1IF	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_STAT_RX1IF /;"	macro	line:79
+MCP_EFLG_RX1OVR	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_EFLG_RX1OVR /;"	macro	line:81
+MCP_EFLG_RX0OVR	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_EFLG_RX0OVR /;"	macro	line:82
+MCP_EFLG_TXBO	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_EFLG_TXBO /;"	macro	line:83
+MCP_EFLG_TXEP	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_EFLG_TXEP /;"	macro	line:84
+MCP_EFLG_RXEP	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_EFLG_RXEP /;"	macro	line:85
+MCP_EFLG_TXWAR	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_EFLG_TXWAR /;"	macro	line:86
+MCP_EFLG_RXWAR	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_EFLG_RXWAR /;"	macro	line:87
+MCP_EFLG_EWARN	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_EFLG_EWARN /;"	macro	line:88
+MCP_EFLG_ERRORMASK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_EFLG_ERRORMASK /;"	macro	line:89
+MCP_BxBFS_MASK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_BxBFS_MASK /;"	macro	line:91
+MCP_BxBFE_MASK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_BxBFE_MASK /;"	macro	line:92
+MCP_BxBFM_MASK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_BxBFM_MASK /;"	macro	line:93
+MCP_BxRTS_MASK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_BxRTS_MASK /;"	macro	line:95
+MCP_BxRTSM_MASK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_BxRTSM_MASK /;"	macro	line:96
+MCP_RXF0SIDH	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF0SIDH /;"	macro	line:101
+MCP_RXF0SIDL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF0SIDL /;"	macro	line:102
+MCP_RXF0EID8	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF0EID8 /;"	macro	line:103
+MCP_RXF0EID0	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF0EID0 /;"	macro	line:104
+MCP_RXF1SIDH	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF1SIDH /;"	macro	line:105
+MCP_RXF1SIDL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF1SIDL /;"	macro	line:106
+MCP_RXF1EID8	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF1EID8 /;"	macro	line:107
+MCP_RXF1EID0	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF1EID0 /;"	macro	line:108
+MCP_RXF2SIDH	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF2SIDH /;"	macro	line:109
+MCP_RXF2SIDL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF2SIDL /;"	macro	line:110
+MCP_RXF2EID8	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF2EID8 /;"	macro	line:111
+MCP_RXF2EID0	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF2EID0 /;"	macro	line:112
+MCP_BFPCTRL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_BFPCTRL /;"	macro	line:113
+MCP_TXRTSCTRL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TXRTSCTRL /;"	macro	line:114
+MCP_CANSTAT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_CANSTAT /;"	macro	line:115
+MCP_CANCTRL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_CANCTRL /;"	macro	line:116
+MCP_RXF3SIDH	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF3SIDH /;"	macro	line:117
+MCP_RXF3SIDL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF3SIDL /;"	macro	line:118
+MCP_RXF3EID8	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF3EID8 /;"	macro	line:119
+MCP_RXF3EID0	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF3EID0 /;"	macro	line:120
+MCP_RXF4SIDH	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF4SIDH /;"	macro	line:121
+MCP_RXF4SIDL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF4SIDL /;"	macro	line:122
+MCP_RXF4EID8	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF4EID8 /;"	macro	line:123
+MCP_RXF4EID0	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF4EID0 /;"	macro	line:124
+MCP_RXF5SIDH	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF5SIDH /;"	macro	line:125
+MCP_RXF5SIDL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF5SIDL /;"	macro	line:126
+MCP_RXF5EID8	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF5EID8 /;"	macro	line:127
+MCP_RXF5EID0	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXF5EID0 /;"	macro	line:128
+MCP_TEC	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TEC /;"	macro	line:129
+MCP_REC	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_REC /;"	macro	line:130
+MCP_RXM0SIDH	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXM0SIDH /;"	macro	line:131
+MCP_RXM0SIDL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXM0SIDL /;"	macro	line:132
+MCP_RXM0EID8	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXM0EID8 /;"	macro	line:133
+MCP_RXM0EID0	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXM0EID0 /;"	macro	line:134
+MCP_RXM1SIDH	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXM1SIDH /;"	macro	line:135
+MCP_RXM1SIDL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXM1SIDL /;"	macro	line:136
+MCP_RXM1EID8	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXM1EID8 /;"	macro	line:137
+MCP_RXM1EID0	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXM1EID0 /;"	macro	line:138
+MCP_CNF3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_CNF3 /;"	macro	line:139
+MCP_CNF2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_CNF2 /;"	macro	line:140
+MCP_CNF1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_CNF1 /;"	macro	line:141
+MCP_CANINTE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_CANINTE /;"	macro	line:142
+MCP_CANINTF	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_CANINTF /;"	macro	line:143
+MCP_EFLG	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_EFLG /;"	macro	line:144
+MCP_TXB0CTRL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TXB0CTRL /;"	macro	line:145
+MCP_TXB1CTRL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TXB1CTRL /;"	macro	line:146
+MCP_TXB2CTRL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TXB2CTRL /;"	macro	line:147
+MCP_RXB0CTRL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXB0CTRL /;"	macro	line:148
+MCP_RXB0SIDH	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXB0SIDH /;"	macro	line:149
+MCP_RXB1CTRL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXB1CTRL /;"	macro	line:150
+MCP_RXB1SIDH	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXB1SIDH /;"	macro	line:151
+MCP_TX_INT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TX_INT /;"	macro	line:154
+MCP_TX01_INT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TX01_INT /;"	macro	line:155
+MCP_RX_INT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RX_INT /;"	macro	line:156
+MCP_NO_INT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_NO_INT /;"	macro	line:157
+MCP_TX01_MASK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TX01_MASK /;"	macro	line:159
+MCP_TX_MASK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TX_MASK /;"	macro	line:160
+MCP_WRITE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_WRITE /;"	macro	line:165
+MCP_READ	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_READ /;"	macro	line:167
+MCP_BITMOD	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_BITMOD /;"	macro	line:169
+MCP_LOAD_TX0	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_LOAD_TX0 /;"	macro	line:171
+MCP_LOAD_TX1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_LOAD_TX1 /;"	macro	line:172
+MCP_LOAD_TX2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_LOAD_TX2 /;"	macro	line:173
+MCP_RTS_TX0	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RTS_TX0 /;"	macro	line:175
+MCP_RTS_TX1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RTS_TX1 /;"	macro	line:176
+MCP_RTS_TX2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RTS_TX2 /;"	macro	line:177
+MCP_RTS_ALL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RTS_ALL /;"	macro	line:178
+MCP_READ_RX0	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_READ_RX0 /;"	macro	line:180
+MCP_READ_RX1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_READ_RX1 /;"	macro	line:181
+MCP_READ_STATUS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_READ_STATUS /;"	macro	line:183
+MCP_RX_STATUS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RX_STATUS /;"	macro	line:185
+MCP_RESET	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RESET /;"	macro	line:187
+MCP_NORMAL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_NORMAL /;"	macro	line:193
+MCP_SLEEP	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_SLEEP /;"	macro	line:194
+MCP_LOOPBACK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_LOOPBACK /;"	macro	line:195
+MCP_LISTENONLY	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_LISTENONLY /;"	macro	line:196
+MODE_CONFIG	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MODE_CONFIG /;"	macro	line:197
+MODE_POWERUP	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MODE_POWERUP /;"	macro	line:198
+MODE_MASK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MODE_MASK /;"	macro	line:199
+ABORT_TX	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define ABORT_TX /;"	macro	line:200
+MODE_ONESHOT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MODE_ONESHOT /;"	macro	line:201
+CLKOUT_ENABLE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CLKOUT_ENABLE /;"	macro	line:202
+CLKOUT_DISABLE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CLKOUT_DISABLE /;"	macro	line:203
+CLKOUT_PS1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CLKOUT_PS1 /;"	macro	line:204
+CLKOUT_PS2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CLKOUT_PS2 /;"	macro	line:205
+CLKOUT_PS4	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CLKOUT_PS4 /;"	macro	line:206
+CLKOUT_PS8	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CLKOUT_PS8 /;"	macro	line:207
+SJW1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define SJW1 /;"	macro	line:213
+SJW2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define SJW2 /;"	macro	line:214
+SJW3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define SJW3 /;"	macro	line:215
+SJW4	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define SJW4 /;"	macro	line:216
+BTLMODE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define BTLMODE /;"	macro	line:222
+SAMPLE_1X	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define SAMPLE_1X /;"	macro	line:223
+SAMPLE_3X	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define SAMPLE_3X /;"	macro	line:224
+SOF_ENABLE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define SOF_ENABLE /;"	macro	line:230
+SOF_DISABLE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define SOF_DISABLE /;"	macro	line:231
+WAKFIL_ENABLE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define WAKFIL_ENABLE /;"	macro	line:232
+WAKFIL_DISABLE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define WAKFIL_DISABLE /;"	macro	line:233
+MCP_RX0IF	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RX0IF /;"	macro	line:239
+MCP_RX1IF	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RX1IF /;"	macro	line:240
+MCP_TX0IF	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TX0IF /;"	macro	line:241
+MCP_TX1IF	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TX1IF /;"	macro	line:242
+MCP_TX2IF	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_TX2IF /;"	macro	line:243
+MCP_ERRIF	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_ERRIF /;"	macro	line:244
+MCP_WAKIF	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_WAKIF /;"	macro	line:245
+MCP_MERRF	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_MERRF /;"	macro	line:246
+MCP_8MHz_1000kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_1000kBPS_CFG1 /;"	macro	line:252
+MCP_8MHz_1000kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_1000kBPS_CFG2 /;"	macro	line:253
+MCP_8MHz_1000kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_1000kBPS_CFG3 /;"	macro	line:254
+MCP_8MHz_500kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_500kBPS_CFG1 /;"	macro	line:256
+MCP_8MHz_500kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_500kBPS_CFG2 /;"	macro	line:257
+MCP_8MHz_500kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_500kBPS_CFG3 /;"	macro	line:258
+MCP_8MHz_250kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_250kBPS_CFG1 /;"	macro	line:260
+MCP_8MHz_250kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_250kBPS_CFG2 /;"	macro	line:261
+MCP_8MHz_250kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_250kBPS_CFG3 /;"	macro	line:262
+MCP_8MHz_200kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_200kBPS_CFG1 /;"	macro	line:264
+MCP_8MHz_200kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_200kBPS_CFG2 /;"	macro	line:265
+MCP_8MHz_200kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_200kBPS_CFG3 /;"	macro	line:266
+MCP_8MHz_125kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_125kBPS_CFG1 /;"	macro	line:268
+MCP_8MHz_125kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_125kBPS_CFG2 /;"	macro	line:269
+MCP_8MHz_125kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_125kBPS_CFG3 /;"	macro	line:270
+MCP_8MHz_100kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_100kBPS_CFG1 /;"	macro	line:272
+MCP_8MHz_100kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_100kBPS_CFG2 /;"	macro	line:273
+MCP_8MHz_100kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_100kBPS_CFG3 /;"	macro	line:274
+MCP_8MHz_80kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_80kBPS_CFG1 /;"	macro	line:276
+MCP_8MHz_80kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_80kBPS_CFG2 /;"	macro	line:277
+MCP_8MHz_80kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_80kBPS_CFG3 /;"	macro	line:278
+MCP_8MHz_50kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_50kBPS_CFG1 /;"	macro	line:280
+MCP_8MHz_50kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_50kBPS_CFG2 /;"	macro	line:281
+MCP_8MHz_50kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_50kBPS_CFG3 /;"	macro	line:282
+MCP_8MHz_40kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_40kBPS_CFG1 /;"	macro	line:284
+MCP_8MHz_40kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_40kBPS_CFG2 /;"	macro	line:285
+MCP_8MHz_40kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_40kBPS_CFG3 /;"	macro	line:286
+MCP_8MHz_33k3BPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_33k3BPS_CFG1 /;"	macro	line:288
+MCP_8MHz_33k3BPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_33k3BPS_CFG2 /;"	macro	line:289
+MCP_8MHz_33k3BPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_33k3BPS_CFG3 /;"	macro	line:290
+MCP_8MHz_31k25BPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_31k25BPS_CFG1 /;"	macro	line:292
+MCP_8MHz_31k25BPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_31k25BPS_CFG2 /;"	macro	line:293
+MCP_8MHz_31k25BPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_31k25BPS_CFG3 /;"	macro	line:294
+MCP_8MHz_20kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_20kBPS_CFG1 /;"	macro	line:296
+MCP_8MHz_20kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_20kBPS_CFG2 /;"	macro	line:297
+MCP_8MHz_20kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_20kBPS_CFG3 /;"	macro	line:298
+MCP_8MHz_10kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_10kBPS_CFG1 /;"	macro	line:300
+MCP_8MHz_10kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_10kBPS_CFG2 /;"	macro	line:301
+MCP_8MHz_10kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_10kBPS_CFG3 /;"	macro	line:302
+MCP_8MHz_5kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_5kBPS_CFG1 /;"	macro	line:304
+MCP_8MHz_5kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_5kBPS_CFG2 /;"	macro	line:305
+MCP_8MHz_5kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHz_5kBPS_CFG3 /;"	macro	line:306
+MCP_16MHz_1000kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_1000kBPS_CFG1 /;"	macro	line:311
+MCP_16MHz_1000kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_1000kBPS_CFG2 /;"	macro	line:312
+MCP_16MHz_1000kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_1000kBPS_CFG3 /;"	macro	line:313
+MCP_16MHz_500kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_500kBPS_CFG1 /;"	macro	line:315
+MCP_16MHz_500kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_500kBPS_CFG2 /;"	macro	line:316
+MCP_16MHz_500kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_500kBPS_CFG3 /;"	macro	line:317
+MCP_16MHz_250kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_250kBPS_CFG1 /;"	macro	line:319
+MCP_16MHz_250kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_250kBPS_CFG2 /;"	macro	line:320
+MCP_16MHz_250kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_250kBPS_CFG3 /;"	macro	line:321
+MCP_16MHz_200kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_200kBPS_CFG1 /;"	macro	line:323
+MCP_16MHz_200kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_200kBPS_CFG2 /;"	macro	line:324
+MCP_16MHz_200kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_200kBPS_CFG3 /;"	macro	line:325
+MCP_16MHz_125kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_125kBPS_CFG1 /;"	macro	line:327
+MCP_16MHz_125kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_125kBPS_CFG2 /;"	macro	line:328
+MCP_16MHz_125kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_125kBPS_CFG3 /;"	macro	line:329
+MCP_16MHz_100kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_100kBPS_CFG1 /;"	macro	line:331
+MCP_16MHz_100kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_100kBPS_CFG2 /;"	macro	line:332
+MCP_16MHz_100kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_100kBPS_CFG3 /;"	macro	line:333
+MCP_16MHz_80kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_80kBPS_CFG1 /;"	macro	line:335
+MCP_16MHz_80kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_80kBPS_CFG2 /;"	macro	line:336
+MCP_16MHz_80kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_80kBPS_CFG3 /;"	macro	line:337
+MCP_16MHz_50kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_50kBPS_CFG1 /;"	macro	line:339
+MCP_16MHz_50kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_50kBPS_CFG2 /;"	macro	line:340
+MCP_16MHz_50kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_50kBPS_CFG3 /;"	macro	line:341
+MCP_16MHz_40kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_40kBPS_CFG1 /;"	macro	line:343
+MCP_16MHz_40kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_40kBPS_CFG2 /;"	macro	line:344
+MCP_16MHz_40kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_40kBPS_CFG3 /;"	macro	line:345
+MCP_16MHz_33k3BPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_33k3BPS_CFG1 /;"	macro	line:347
+MCP_16MHz_33k3BPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_33k3BPS_CFG2 /;"	macro	line:348
+MCP_16MHz_33k3BPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_33k3BPS_CFG3 /;"	macro	line:349
+MCP_16MHz_20kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_20kBPS_CFG1 /;"	macro	line:351
+MCP_16MHz_20kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_20kBPS_CFG2 /;"	macro	line:352
+MCP_16MHz_20kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_20kBPS_CFG3 /;"	macro	line:353
+MCP_16MHz_10kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_10kBPS_CFG1 /;"	macro	line:355
+MCP_16MHz_10kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_10kBPS_CFG2 /;"	macro	line:356
+MCP_16MHz_10kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_10kBPS_CFG3 /;"	macro	line:357
+MCP_16MHz_5kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_5kBPS_CFG1 /;"	macro	line:359
+MCP_16MHz_5kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_5kBPS_CFG2 /;"	macro	line:360
+MCP_16MHz_5kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHz_5kBPS_CFG3 /;"	macro	line:361
+MCP_20MHz_1000kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_1000kBPS_CFG1 /;"	macro	line:366
+MCP_20MHz_1000kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_1000kBPS_CFG2 /;"	macro	line:367
+MCP_20MHz_1000kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_1000kBPS_CFG3 /;"	macro	line:368
+MCP_20MHz_500kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_500kBPS_CFG1 /;"	macro	line:370
+MCP_20MHz_500kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_500kBPS_CFG2 /;"	macro	line:371
+MCP_20MHz_500kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_500kBPS_CFG3 /;"	macro	line:372
+MCP_20MHz_250kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_250kBPS_CFG1 /;"	macro	line:374
+MCP_20MHz_250kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_250kBPS_CFG2 /;"	macro	line:375
+MCP_20MHz_250kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_250kBPS_CFG3 /;"	macro	line:376
+MCP_20MHz_200kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_200kBPS_CFG1 /;"	macro	line:378
+MCP_20MHz_200kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_200kBPS_CFG2 /;"	macro	line:379
+MCP_20MHz_200kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_200kBPS_CFG3 /;"	macro	line:380
+MCP_20MHz_125kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_125kBPS_CFG1 /;"	macro	line:382
+MCP_20MHz_125kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_125kBPS_CFG2 /;"	macro	line:383
+MCP_20MHz_125kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_125kBPS_CFG3 /;"	macro	line:384
+MCP_20MHz_100kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_100kBPS_CFG1 /;"	macro	line:386
+MCP_20MHz_100kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_100kBPS_CFG2 /;"	macro	line:387
+MCP_20MHz_100kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_100kBPS_CFG3 /;"	macro	line:388
+MCP_20MHz_80kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_80kBPS_CFG1 /;"	macro	line:390
+MCP_20MHz_80kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_80kBPS_CFG2 /;"	macro	line:391
+MCP_20MHz_80kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_80kBPS_CFG3 /;"	macro	line:392
+MCP_20MHz_50kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_50kBPS_CFG1 /;"	macro	line:394
+MCP_20MHz_50kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_50kBPS_CFG2 /;"	macro	line:395
+MCP_20MHz_50kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_50kBPS_CFG3 /;"	macro	line:396
+MCP_20MHz_40kBPS_CFG1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_40kBPS_CFG1 /;"	macro	line:398
+MCP_20MHz_40kBPS_CFG2	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_40kBPS_CFG2 /;"	macro	line:399
+MCP_20MHz_40kBPS_CFG3	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHz_40kBPS_CFG3 /;"	macro	line:400
+MCPDEBUG	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCPDEBUG /;"	macro	line:403
+MCPDEBUG_TXBUF	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCPDEBUG_TXBUF /;"	macro	line:404
+MCP_N_TXBUFFERS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_N_TXBUFFERS /;"	macro	line:405
+MCP_RXBUF_0	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXBUF_0 /;"	macro	line:407
+MCP_RXBUF_1	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_RXBUF_1 /;"	macro	line:408
+MCP2515_SELECT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP2515_SELECT(/;"	macro	line:410
+MCP2515_UNSELECT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP2515_UNSELECT(/;"	macro	line:411
+MCP2515_OK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP2515_OK /;"	macro	line:413
+MCP2515_FAIL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP2515_FAIL /;"	macro	line:414
+MCP_ALLTXBUSY	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_ALLTXBUSY /;"	macro	line:415
+CANDEBUG	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CANDEBUG /;"	macro	line:417
+CANUSELOOP	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CANUSELOOP /;"	macro	line:419
+CANSENDTIMEOUT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CANSENDTIMEOUT /;"	macro	line:421
+CANAUTOPROCESS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CANAUTOPROCESS /;"	macro	line:426
+CANAUTOON	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CANAUTOON /;"	macro	line:427
+CANAUTOOFF	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CANAUTOOFF /;"	macro	line:428
+CAN_STDID	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_STDID /;"	macro	line:430
+CAN_EXTID	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_EXTID /;"	macro	line:431
+CANDEFAULTIDENT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CANDEFAULTIDENT /;"	macro	line:433
+CANDEFAULTIDENTEXT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CANDEFAULTIDENTEXT /;"	macro	line:434
+MCP_STDEXT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_STDEXT /;"	macro	line:436
+MCP_STD	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_STD /;"	macro	line:437
+MCP_EXT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_EXT /;"	macro	line:438
+MCP_ANY	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_ANY /;"	macro	line:439
+MCP_20MHZ	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_20MHZ /;"	macro	line:441
+MCP_16MHZ	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_16MHZ /;"	macro	line:442
+MCP_8MHZ	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define MCP_8MHZ /;"	macro	line:443
+CAN_4K096BPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_4K096BPS /;"	macro	line:445
+CAN_5KBPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_5KBPS /;"	macro	line:446
+CAN_10KBPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_10KBPS /;"	macro	line:447
+CAN_20KBPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_20KBPS /;"	macro	line:448
+CAN_31K25BPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_31K25BPS /;"	macro	line:449
+CAN_33K3BPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_33K3BPS /;"	macro	line:450
+CAN_40KBPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_40KBPS /;"	macro	line:451
+CAN_50KBPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_50KBPS /;"	macro	line:452
+CAN_80KBPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_80KBPS /;"	macro	line:453
+CAN_100KBPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_100KBPS /;"	macro	line:454
+CAN_125KBPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_125KBPS /;"	macro	line:455
+CAN_200KBPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_200KBPS /;"	macro	line:456
+CAN_250KBPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_250KBPS /;"	macro	line:457
+CAN_500KBPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_500KBPS /;"	macro	line:458
+CAN_1000KBPS	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_1000KBPS /;"	macro	line:459
+CAN_OK	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_OK /;"	macro	line:461
+CAN_FAILINIT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_FAILINIT /;"	macro	line:462
+CAN_FAILTX	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_FAILTX /;"	macro	line:463
+CAN_MSGAVAIL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_MSGAVAIL /;"	macro	line:464
+CAN_NOMSG	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_NOMSG /;"	macro	line:465
+CAN_CTRLERROR	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_CTRLERROR /;"	macro	line:466
+CAN_GETTXBFTIMEOUT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_GETTXBFTIMEOUT /;"	macro	line:467
+CAN_SENDMSGTIMEOUT	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_SENDMSGTIMEOUT /;"	macro	line:468
+CAN_FAIL	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_FAIL /;"	macro	line:469
+CAN_MAX_CHAR_IN_MESSAGE	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2515dfs.h	/^#define CAN_MAX_CHAR_IN_MESSAGE /;"	macro	line:471
