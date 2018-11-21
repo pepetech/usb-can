@@ -39,6 +39,8 @@ void MCP_CAN::mcp2515_reset(void)
     spiSettings.ActiveChipSelectValue = 0xFFFE;
     spiSettings.IdleChipSelectValue = 0xFFFF;
     spiSettings.BitRate = 10000000;
+    spiSettings.CSToDataDelay = 1;
+    spiSettings.LastDataByteToCSDelay = 1;
     spiSettings.BytesPerSPITransfer = 1;
 
     int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
@@ -69,6 +71,8 @@ uint8_t MCP_CAN::mcp2515_readRegister(const uint8_t address)
     spiSettings.ActiveChipSelectValue = 0xFFFE;
     spiSettings.IdleChipSelectValue = 0xFFFF;
     spiSettings.BitRate = 10000000;
+    spiSettings.CSToDataDelay = 1;
+    spiSettings.LastDataByteToCSDelay = 1;
     spiSettings.BytesPerSPITransfer = 3;
 
     int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
@@ -103,6 +107,8 @@ void MCP_CAN::mcp2515_readRegisterS(const uint8_t address, uint8_t values[], con
     spiSettings.ActiveChipSelectValue = 0xFFFE;
     spiSettings.IdleChipSelectValue = 0xFFFF;
     spiSettings.BitRate = 10000000;
+    spiSettings.CSToDataDelay = 1;
+    spiSettings.LastDataByteToCSDelay = 1;
     spiSettings.BytesPerSPITransfer = n + 2;
 
     int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
@@ -140,6 +146,8 @@ void MCP_CAN::mcp2515_setRegister(const uint8_t address, const uint8_t value)
     spiSettings.ActiveChipSelectValue = 0xFFFE;
     spiSettings.IdleChipSelectValue = 0xFFFF;
     spiSettings.BitRate = 10000000;
+    spiSettings.CSToDataDelay = 1;
+    spiSettings.LastDataByteToCSDelay = 1;
     spiSettings.BytesPerSPITransfer = 3;
 
     int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
@@ -172,6 +180,8 @@ void MCP_CAN::mcp2515_setRegisterS(const uint8_t address, const uint8_t values[]
     spiSettings.ActiveChipSelectValue = 0xFFFE;
     spiSettings.IdleChipSelectValue = 0xFFFF;
     spiSettings.BitRate = 10000000;
+    spiSettings.CSToDataDelay = 1;
+    spiSettings.LastDataByteToCSDelay = 1;
     spiSettings.BytesPerSPITransfer = n + 2;
 
     int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
@@ -209,6 +219,8 @@ void MCP_CAN::mcp2515_modifyRegister(const uint8_t address, const uint8_t mask, 
     spiSettings.ActiveChipSelectValue = 0xFFFE;
     spiSettings.IdleChipSelectValue = 0xFFFF;
     spiSettings.BitRate = 10000000;
+    spiSettings.CSToDataDelay = 1;
+    spiSettings.LastDataByteToCSDelay = 1;
     spiSettings.BytesPerSPITransfer = 4;
 
     int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
@@ -242,6 +254,8 @@ uint8_t MCP_CAN::mcp2515_readStatus(void)
     spiSettings.ActiveChipSelectValue = 0xFFFE;
     spiSettings.IdleChipSelectValue = 0xFFFF;
     spiSettings.BitRate = 10000000;
+    spiSettings.CSToDataDelay = 1;
+    spiSettings.LastDataByteToCSDelay = 1;
     spiSettings.BytesPerSPITransfer = 2;
 
     int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
