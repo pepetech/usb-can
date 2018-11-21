@@ -3,7 +3,7 @@ MCP2210-CAN-sdk
 
 This is an open source C++ library for the USB-CAN converter developed by Rafael Silva and João Silva
 
-This is based on a library for Microchip's USB-to-SPI protocol converter chip <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/22288A.pdf">MCP2210</a> initially developed by <a href="https://github.com/kerrydwong/MCP2210-Library">kerrydwong.
+This is based on a library for Microchip's USB-to-SPI protocol converter chip <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/22288A.pdf">MCP2210</a> initially developed by <a href="https://github.com/kerrydwong/MCP2210-Library">kerrydwong</a>.
 
 Notes:
 <ul>
