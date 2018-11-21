@@ -337,7 +337,10 @@ int main(int argc, char** argv) {
 
     MCP_CAN *mcp2515 = new MCP_CAN(handle);
 
-    printf("Init ok? %d", mcp2515->begin(MCP_ANY, CAN_125KBPS, MCP_8MHZ) == CAN_OK);
+    if(mcp2515->begin(MCP_ANY, CAN_125KBPS, MCP_8MHZ) == CAN_OK)
+        printf("Begin ok!");
+    else
+        printf("Begin fail!");
 
     while(1)
     {
