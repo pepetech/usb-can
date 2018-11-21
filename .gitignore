@@ -16,3 +16,6 @@ dist
 doxygen
 gitcmd.txt
 .gitignore
+
+# Google Drive .ini
+desktop.ini
