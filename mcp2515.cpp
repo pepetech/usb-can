@@ -282,6 +282,9 @@ uint8_t MCP_CAN::mcp2515_setCANCTRL_Mode(const uint8_t newmode)
     mcp2515_modifyRegister(MCP_CANCTRL, MODE_MASK, newmode);
 
     i = mcp2515_readRegister(MCP_CANCTRL);
+
+    printf("%02X\r\n", i);
+
     i &= MODE_MASK;
 
     if ( i == newmode )
