@@ -322,7 +322,11 @@ void TestMisc(hid_device* handle) {
 
 }
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv)
+{
+    setvbuf(stdout, NULL, _IONBF, 0);
+    setvbuf(stderr, NULL, _IONBF, 0);
+
     hid_device *handle;
 
     /**
@@ -335,12 +339,14 @@ int main(int argc, char** argv) {
         exit(-1);
     }
 
+    printf("Going init mcp2515...\r\n");
+
     MCP_CAN *mcp2515 = new MCP_CAN(handle);
 
     if(mcp2515->begin(MCP_ANY, CAN_125KBPS, MCP_8MHZ) == CAN_OK)
-        printf("Begin ok!");
+        printf("Begin ok!\r\n");
     else
-        printf("Begin fail!");
+        printf("Begin fail!\r\n");
 
     while(1)
     {

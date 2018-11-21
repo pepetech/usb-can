@@ -10,4 +10,4 @@ TestTC77	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210t
 TestMCP23S08	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210test.cpp	/^void TestMCP23S08(hid_device* handle) {$/;"	function	line:204	signature:(hid_device* handle)
 TestGPIO	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210test.cpp	/^void TestGPIO(hid_device* handle) {$/;"	function	line:267	signature:(hid_device* handle)
 TestMisc	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210test.cpp	/^void TestMisc(hid_device* handle) {$/;"	function	line:303	signature:(hid_device* handle)
-main	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210test.cpp	/^int main(int argc, char** argv) {$/;"	function	line:325	signature:(int argc, char** argv)
+main	D:\Google Drive Pessoal\Projetos\USB-CAN\SW V1\MCP2210-CAN-sdk\mcp2210test.cpp	/^int main(int argc, char** argv)$/;"	function	line:325	signature:(int argc, char** argv)
