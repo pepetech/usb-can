@@ -41,7 +41,7 @@ void MCP_CAN::mcp2515_reset(void)
     spiSettings.BitRate = 10000000;
     spiSettings.BytesPerSPITransfer = 1;
 
-    r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
+    int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
 
     if (r != 0) {
         printf("Errror setting SPI parameters.\n");
@@ -71,11 +71,11 @@ uint8_t MCP_CAN::mcp2515_readRegister(const uint8_t address)
     spiSettings.BitRate = 10000000;
     spiSettings.BytesPerSPITransfer = 3;
 
-    r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
+    int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
 
     if (r != 0) {
         printf("Errror setting SPI parameters.\n");
-        return;
+        return 0;
     }
 
     uint8_t buf[3];
@@ -105,14 +105,14 @@ void MCP_CAN::mcp2515_readRegisterS(const uint8_t address, uint8_t values[], con
     spiSettings.BitRate = 10000000;
     spiSettings.BytesPerSPITransfer = n + 2;
 
-    r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
+    int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
 
     if (r != 0) {
         printf("Errror setting SPI parameters.\n");
         return;
     }
 
-    uint8_t *buf = malloc(n + 2);
+    uint8_t *buf = (uint8_t *)malloc(n + 2);
 
     memset(buf, 0, n + 2);
 
@@ -121,7 +121,7 @@ void MCP_CAN::mcp2515_readRegisterS(const uint8_t address, uint8_t values[], con
 
     SPIDataTransferStatusDef spiTransaction = SPISendReceive(this->mcp2210handle, buf, n + 2);
 
-    memcpy(values, (void *)((uint32_t)spiTransaction.DataReceived + 2), n);
+    memcpy(values, (void *)((uintptr_t)spiTransaction.DataReceived + 2), n);
 
     free(buf);
 }
@@ -142,7 +142,7 @@ void MCP_CAN::mcp2515_setRegister(const uint8_t address, const uint8_t value)
     spiSettings.BitRate = 10000000;
     spiSettings.BytesPerSPITransfer = 3;
 
-    r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
+    int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
 
     if (r != 0) {
         printf("Errror setting SPI parameters.\n");
@@ -174,21 +174,21 @@ void MCP_CAN::mcp2515_setRegisterS(const uint8_t address, const uint8_t values[]
     spiSettings.BitRate = 10000000;
     spiSettings.BytesPerSPITransfer = n + 2;
 
-    r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
+    int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
 
     if (r != 0) {
         printf("Errror setting SPI parameters.\n");
         return;
     }
 
-    uint8_t *buf = malloc(n + 2);
+    uint8_t *buf = (uint8_t *)malloc(n + 2);
 
     memset(buf, 0, n + 2);
 
     buf[0] = MCP_WRITE;
     buf[1] = address;
 
-    memcpy((void *)((uint32_t)buf + 2), values, n);
+    memcpy((void *)((uintptr_t)buf + 2), values, n);
 
     SPIDataTransferStatusDef spiTransaction = SPISendReceive(this->mcp2210handle, buf, n + 2);
 
@@ -211,7 +211,7 @@ void MCP_CAN::mcp2515_modifyRegister(const uint8_t address, const uint8_t mask, 
     spiSettings.BitRate = 10000000;
     spiSettings.BytesPerSPITransfer = 4;
 
-    r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
+    int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
 
     if (r != 0) {
         printf("Errror setting SPI parameters.\n");
@@ -244,11 +244,11 @@ uint8_t MCP_CAN::mcp2515_readStatus(void)
     spiSettings.BitRate = 10000000;
     spiSettings.BytesPerSPITransfer = 2;
 
-    r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
+    int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
 
     if (r != 0) {
         printf("Errror setting SPI parameters.\n");
-        return;
+        return 0;
     }
 
     uint8_t buf[3];
