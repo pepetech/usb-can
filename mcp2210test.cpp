@@ -337,11 +337,11 @@ int main(int argc, char** argv) {
 
     MCP_CAN *mcp2515 = new MCP_CAN(handle);
 
-    mcp2515.begin();
+    mcp2515->begin();
 
     while(1)
     {
-        
+
     }
 
     /**
