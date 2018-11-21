@@ -16,6 +16,7 @@
  *  limitations under the License.
  */
 
+#include <time.h>
 #include "mcp2210.h"
 #include "mcp2515.h"
 
