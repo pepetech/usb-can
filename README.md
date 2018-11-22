@@ -56,7 +56,7 @@ the compiled code needs root access to the device and need to be run using "sudo
 * **Rafael Silva** - *Initial work* - [Crying-Face-Emoji](https://github.com/Crying-Face-Emoji)
 * **João Silva** - *Initial work* - [vankxr](https://github.com/vankxr)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/Crying-Face-Emoji/MCP2210-CAN-sdk/graphs/contributors) who participated in this project.
 
 ## License
 
