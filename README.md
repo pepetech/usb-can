@@ -64,5 +64,5 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 ## Acknowledgments
 
-* <a href="https://github.com/kerrydwong/MCP2210-Library">kerrydwong</a>. *mcp2210 library used as base*
-* <a href="https://github.com/signal11/hidapi">signal11</a>. *original HID API*
+* <a href="https://github.com/kerrydwong/MCP2210-Library">kerrydwong</a> - *mcp2210 library used as base*
+* <a href="https://github.com/signal11/hidapi">signal11</a> - *original HID API*
