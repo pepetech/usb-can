@@ -360,7 +360,7 @@ int main(int argc, char** argv)
         {
             lastTime = now;
 
-            printf("Going to send message.\r\nHeader: 0x100\r\nData: 0x55 0xAA 0x01 0x02 0x55 0xAA 0x01 0x02\r\n");
+            printf("Going to write messag\rHeader: 0x100\rBuffer: 0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, 0x02\n");
 
             uint8_t data[] = {0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, 0x02};
 
@@ -368,8 +368,42 @@ int main(int argc, char** argv)
                 printf("Send ok!\r\n");
             else
                 printf("Send fail!\r\n");
+
+
+
         }
     }
+/*
+     while(1)
+    {
+        static int lastTime = 0;
+        int now = time(0);
+
+        if(now - lastTime > 5)
+        {
+            lastTime = now;
+
+            printf("Going to read message\r\n");
+
+	    uint32_t header = 0x100;
+	    uint8_t length = 8;
+
+            uint8_t data[16];
+	    memset(data, 0x00, 16);
+
+            if(mcp2515->readMsgBuf(&header, &length, data) == CAN_OK)
+	    {
+		printf("receive ok!\r\n");
+		for(uint8_t i = 0; i < 8; i++)
+		{
+			printf("data: %02X\r\n", data[i]);
+		}
+	    }
+	    else
+                printf("receive fail!\r\n");
+        }
+    }
+/*
 
     /**
      * Uncomment each line to test the
