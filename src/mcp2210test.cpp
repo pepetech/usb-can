@@ -345,34 +345,25 @@ int main(int argc, char** argv)
     MCP_CAN *mcp2515 = new MCP_CAN(handle);
 
     if(mcp2515->begin(MCP_ANY, CAN_125KBPS, MCP_8MHZ) == CAN_OK)
+    {
         printf("Begin ok!\r\n");
+
+	mcp2515->setMode(MCP_NORMAL);
+
+	    printf("Going to write messag\rHeader: 0x100\rBuffer: 0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, 0x02\n");
+
+	    uint8_t data[] = {0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, 0x02};
+
+	    if(mcp2515->sendMsgBuf(0x100, 0, 8, data) == CAN_OK)
+		printf("Send ok!\r\n");
+	    else
+		printf("Send fail!\r\n");
+    }
     else
         printf("Begin fail!\r\n");
 
-    mcp2515->setMode(MCP_NORMAL);
-
-    while(1)
-    {
-        static int lastTime = 0;
-        int now = time(0);
-
-        if(now - lastTime > 5)
-        {
-            lastTime = now;
-
-            printf("Going to write messag\rHeader: 0x100\rBuffer: 0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, 0x02\n");
-
-            uint8_t data[] = {0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, 0x02};
-
-            if(mcp2515->sendMsgBuf(0x100, 0, 8, data) == CAN_OK)
-                printf("Send ok!\r\n");
-            else
-                printf("Send fail!\r\n");
 
 
-
-        }
-    }
 /*
      while(1)
     {
