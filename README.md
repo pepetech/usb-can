@@ -1,6 +1,6 @@
 # MCP2210-CAN-sdk
 
-This is an open source C++ library for use with the <a href="https://drive.google.com/drive/folders/1ML5FqQclwkzI4NppzGXryIliByLc3iu7?usp=sharing">USB-CAN</a> converter developed by Rafael Silva and João Silva
+This is an open source C++ library for use with the <a href="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif">USB-CAN</a> converter developed by Rafael Silva and João Silva
 
 ## Getting Started
 
