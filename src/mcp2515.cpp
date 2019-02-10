@@ -38,7 +38,7 @@ void MCP_CAN::mcp2515_reset(void)
     //chip select is GP0
     spiSettings.ActiveChipSelectValue = 0xFFFE;
     spiSettings.IdleChipSelectValue = 0xFFFF;
-    spiSettings.BitRate = 1000000;
+    spiSettings.BitRate = 10000000;
     spiSettings.CSToDataDelay = 1;
     spiSettings.LastDataByteToCSDelay = 1;
     spiSettings.BytesPerSPITransfer = 1;
@@ -70,7 +70,7 @@ uint8_t MCP_CAN::mcp2515_readRegister(const uint8_t address)
     //chip select is GP0
     spiSettings.ActiveChipSelectValue = 0xFFFE;
     spiSettings.IdleChipSelectValue = 0xFFFF;
-    spiSettings.BitRate = 1000000;
+    spiSettings.BitRate = 10000000;
     spiSettings.CSToDataDelay = 1;
     spiSettings.LastDataByteToCSDelay = 1;
     spiSettings.BytesPerSPITransfer = 3;
@@ -106,7 +106,7 @@ void MCP_CAN::mcp2515_readRegisterS(const uint8_t address, uint8_t values[], con
     //chip select is GP0
     spiSettings.ActiveChipSelectValue = 0xFFFE;
     spiSettings.IdleChipSelectValue = 0xFFFF;
-    spiSettings.BitRate = 1000000;
+    spiSettings.BitRate = 10000000;
     spiSettings.CSToDataDelay = 1;
     spiSettings.LastDataByteToCSDelay = 1;
     spiSettings.BytesPerSPITransfer = n + 2;
@@ -145,7 +145,7 @@ void MCP_CAN::mcp2515_setRegister(const uint8_t address, const uint8_t value)
     //chip select is GP0
     spiSettings.ActiveChipSelectValue = 0xFFFE;
     spiSettings.IdleChipSelectValue = 0xFFFF;
-    spiSettings.BitRate = 1000000;
+    spiSettings.BitRate = 10000000;
     spiSettings.CSToDataDelay = 1;
     spiSettings.LastDataByteToCSDelay = 1;
     spiSettings.BytesPerSPITransfer = 3;
@@ -179,7 +179,7 @@ void MCP_CAN::mcp2515_setRegisterS(const uint8_t address, const uint8_t values[]
     //chip select is GP0
     spiSettings.ActiveChipSelectValue = 0xFFFE;
     spiSettings.IdleChipSelectValue = 0xFFFF;
-    spiSettings.BitRate = 1000000;
+    spiSettings.BitRate = 10000000;
     spiSettings.CSToDataDelay = 1;
     spiSettings.LastDataByteToCSDelay = 1;
     spiSettings.BytesPerSPITransfer = n + 2;
@@ -218,7 +218,7 @@ void MCP_CAN::mcp2515_modifyRegister(const uint8_t address, const uint8_t mask, 
     //chip select is GP0
     spiSettings.ActiveChipSelectValue = 0xFFFE;
     spiSettings.IdleChipSelectValue = 0xFFFF;
-    spiSettings.BitRate = 1000000;
+    spiSettings.BitRate = 10000000;
     spiSettings.CSToDataDelay = 1;
     spiSettings.LastDataByteToCSDelay = 1;
     spiSettings.BytesPerSPITransfer = 4;
@@ -253,7 +253,7 @@ uint8_t MCP_CAN::mcp2515_readStatus(void)
     //chip select is GP0
     spiSettings.ActiveChipSelectValue = 0xFFFE;
     spiSettings.IdleChipSelectValue = 0xFFFF;
-    spiSettings.BitRate = 1000000;
+    spiSettings.BitRate = 10000000;
     spiSettings.CSToDataDelay = 1;
     spiSettings.LastDataByteToCSDelay = 1;
     spiSettings.BytesPerSPITransfer = 2;
