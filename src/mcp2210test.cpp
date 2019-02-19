@@ -101,8 +101,9 @@ int main(int argc, char** argv)
         {
             lastTime = now;
 
-            /*
-            printf("Going to write messag\rHeader: 0x100\rBuffer: 0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, 0x02\n");
+            static int count = 0;
+
+            printf("Going to write messag\rHeader: 0x100\rBuffer: 0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, %02X \n", count);
 
             uint8_t data[] = {0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, 0x02};
 
@@ -110,7 +111,8 @@ int main(int argc, char** argv)
                 printf("Send ok!\r\n");
             else
                 printf("Send fail!\r\n");
-            */
+
+            count++;
         }
 
         ExternalInterruptPinStatusDef extInt = GetNumOfEventsFromInterruptPin(handle, 1);
