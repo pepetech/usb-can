@@ -112,7 +112,8 @@ int main(int argc, char** argv)
             else
                 printf("Send fail!\r\n");
 
-            count++;
+            if(count == 254) count = 0;
+            else count++;
         }
 
         ExternalInterruptPinStatusDef extInt = GetNumOfEventsFromInterruptPin(handle, 1);
