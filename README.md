@@ -8,34 +8,30 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+- You will need root access to a Linux machine.
+- You will need to install development packages for libudev and libusb
 
 ```
-you will need root access to a Linux machine
-
-You may need to add the provided udev rule (99-hid.rules) to the /etc/udev/rules.d directory.
-
-you will need to install development packages for libudev and libusb
 sudo apt-get install libudev-dev libusb-1.0-0-dev
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+A step by step series of examples that tell you how to get a development environment running
 
-Clone this repository to your working directory
+- Clone this repository to your working directory
 
 ```
 sudo git clone https://github.com/Crying-Face-Emoji/MCP2210-CAN-sdk
 ```
 
-go to the source directory
+- Go to the source directory
 
 ```
 cd MCP2210-CAN-sdk/
 ```
 
-run make
+- Run make
 
 ```
 sudo make
@@ -43,13 +39,14 @@ sudo make
 
 ## Running
 
-todo: Explain how to run the automated tests for this system
+- You may need to add the provided udev rules to the /etc/udev/rules.d directory.
 
 ```
-must run under Linux machine
-
-the compiled code needs root access to the device and need to be run using "sudo".
+sudo cp 99-hid.rules /etc/udev/rules.d
 ```
+- Depending on your user permissions, you might need to run the compilled binary with root access (sudo)
+
+TODO: Explain how to run the automated tests for this system
 
 ## Authors
 
