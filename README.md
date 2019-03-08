@@ -42,7 +42,7 @@ sudo make
 - You may need to add the provided udev rules to the /etc/udev/rules.d directory.
 
 ```
-sudo cp 99-hid.rules /etc/udev/rules.d
+sudo cp mcp2210-hid.rules /etc/udev/rules.d
 ```
 - Depending on your user permissions, you might need to run the compilled binary with root access (sudo)
 
