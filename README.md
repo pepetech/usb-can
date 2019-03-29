@@ -11,6 +11,9 @@ These instructions will get you a copy of the project up and running on your loc
 - You will need root access to a Linux machine.
 - You will need to install development packages for libudev and libusb
 
+- You will need the <a href="https://github.com/signal11/hidapi">hidapi</a> library installed 
+
+- You will need to install libusb
 ```
 sudo apt-get install libudev-dev libusb-1.0-0-dev
 ```
