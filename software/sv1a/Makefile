@@ -1,42 +1,63 @@
-TARGET = usb_can
+APP_NAME = cp2130
 
-BUILD = ./build
-SRC = ./src
+# Directories
+TARGETDIR = bin
+SOURCEDIR = src
+OBJECTDIR = bin/obj
+INCLUDEDIR = include
 
+STRUCT := $(shell find $(SOURCEDIR) -type d)
+
+SOURCEDIRSTRUCT := $(filter-out %/$(INCLUDEDIR), $(STRUCT))
+INCLUDEDIRSTRUCT := $(filter %/$(INCLUDEDIR), $(STRUCT))
+OBJECTDIRSTRUCT := $(subst $(SOURCEDIR), $(OBJECTDIR), $(SOURCEDIRSTRUCT))
+
+# Compillers
 CC = gcc
 CXX = g++
 
-CFLAGS = $(INC_FLAGS) -std=gnu99
-CPPFLAGS = $(INC_FLAGS) -std=gnu++11
+# Compiller flags
+CFLAGS = $(addprefix -I,$(INCLUDEDIRSTRUCT)) -std=gnu11
+CXXFLAGS = $(addprefix -I,$(INCLUDEDIRSTRUCT)) -std=gnu++11
 
-LDLIBS = -ludev
+LDLIBS = -ludev -lusb-1.0
 
-SRCS = $(shell find $(SRC) -name *.cpp -or -name *.c)
-OBJS = $(SRCS:%=$(BUILD)/%.o)
-DEPS = $(OBJS:.o=.d)
+# Sources & objects
+SRCFILES := $(addsuffix /*, $(SOURCEDIRSTRUCT))
+SRCFILES := $(wildcard $(SRCFILES))
 
-INC_DIRS = $(shell find $(SRC) -type d)
-INC_FLAGS = $(addprefix -I,$(INC_DIRS))
+CSOURCES := $(filter %.c, $(SRCFILES))
+COBJECTS := $(subst $(SOURCEDIR), $(OBJECTDIR), $(CSOURCES:%.c=%.o))
 
-$(BUILD)/$(TARGET): $(OBJS)
-	$(CXX) -o $@ $(OBJS) $(CPPFLAGS) $(LDLIBS)
+CXXSOURCES := $(filter %.cpp, $(SRCFILES))
+CXXOBJECTS := $(subst $(SOURCEDIR), $(OBJECTDIR), $(CXXSOURCES:%.cpp=%.o))
 
-# c source
-$(BUILD)/%.c.o: %.c
-	$(MKDIR_P) $(dir $@)
-	$(CC) -c -o $@ $< $(CFLAGS)
+SOURCES = $(ASSOURCES) $(CSOURCES) $(CXXSOURCES)
+OBJECTS = $(ASOBJECTS) $(COBJECTS) $(CXXOBJECTS)
 
-# c++ source
-$(BUILD)/%.cpp.o: %.cpp
-	$(MKDIR_P) $(dir $@)
-	$(CXX) -c -o $@ $< $(CPPFLAGS)
+DEPENDENCIES = $(OBJECTS:.o=.d)
 
+# Target
+TARGET = $(TARGETDIR)/$(APP_NAME)
 
-.PHONY: clean
+all: make-dir $(TARGET)
+
+$(TARGET): $(OBJECTS)
+	@echo Compiling App \'$@\'...
+	@$(CXX) -o $@ $(OBJECTS) $(CXXFLAGS) $(LDLIBS)
+
+$(OBJECTDIR)/%.o: $(SOURCEDIR)/%.c
+	@echo Compilling C file \'$<\' \> \'$@\'...
+	@$(CC) $(CFLAGS) -c -o $@ $<
+
+$(OBJECTDIR)/%.o: $(SOURCEDIR)/%.cpp
+	@echo Compilling C++ file \'$<\' \> \'$@\'...
+	@$(CXX) $(CXXFLAGS) -c -o $@ $<
+
+make-dir:
+	@mkdir -p $(OBJECTDIRSTRUCT)
 
 clean:
-	rm -r $(BUILD)
+	@rm -rf $(OBJECTDIR)/*
 
--include $(DEPS)
-
-MKDIR_P ?= mkdir -p
+-include $(DEPENDENCIES)
