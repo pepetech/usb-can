@@ -105,7 +105,7 @@ int main(int argc, char** argv)
 
             printf("Going to write messag\rHeader: 0x100\rBuffer: 0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, %02X \n", count);
 
-            uint8_t data[] = {0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, 0x02};
+            uint8_t data[] = {0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, (uint8_t)count};
 
             if(mcp2515->sendMsgBuf(0x100, 0, 8, data) == CAN_OK)
                 printf("Send ok!\r\n");
@@ -116,12 +116,12 @@ int main(int argc, char** argv)
             else count++;
         }
 
-        ExternalInterruptPinStatusDef extInt = GetNumOfEventsFromInterruptPin(handle, 1);
+        //ExternalInterruptPinStatusDef extInt = GetNumOfEventsFromInterruptPin(handle, 1);
 
-        if(extInt.InterruptEventCounter)
-            printf("Event count: %hu\r\n", extInt.InterruptEventCounter);
+        //if(extInt.InterruptEventCounter)
+        //    printf("Event count: %hu\r\n", extInt.InterruptEventCounter);
 
-        while(extInt.InterruptEventCounter--)
+        while(0) // extInt.InterruptEventCounter--
         {
             printf("Going to read message\r\n");
 
