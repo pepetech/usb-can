@@ -219,7 +219,9 @@
 #define MAX(a,b) ({ __typeof__ (a) _a = (a); __typeof__ (b) _b = (b); _a > _b ? _a : _b; })
 #define MIN(a,b) ({ __typeof__ (a) _a = (a); __typeof__ (b) _b = (b); _a < _b ? _a : _b; })
 
-typedef uint8_t* str_t;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct cp2130_device_t
 {
@@ -261,8 +263,8 @@ void cp2130_set_gpio_cs(cp2130_device_t *pCpDev, uint8_t usCh, uint8_t usCtrl);
 void cp2130_get_gpio_mode_level(cp2130_device_t *pCpDev, uint16_t *pusLevel, uint16_t *pusMode);
 void cp2130_set_gpio_mode_level(cp2130_device_t *pCpDev, uint8_t ubIndex, uint8_t ubMode, uint8_t ubLevel);
 
-void cp2130_get_gpio_Values(cp2130_device_t *pCpDev, uint16_t *pusLevel);
-void cp2130_set_gpio_Values(cp2130_device_t *pCpDev, uint16_t usLevel, uint16_t usMask);
+void cp2130_get_gpio_values(cp2130_device_t *pCpDev, uint16_t *pusLevel);
+void cp2130_set_gpio_values(cp2130_device_t *pCpDev, uint16_t usLevel, uint16_t usMask);
 
 void cp2130_get_rtr_state(cp2130_device_t *pCpDev, uint8_t *pubActive);
 void cp2130_set_rtr_stop(cp2130_device_t *pCpDev, uint8_t ubAbort);
@@ -296,5 +298,9 @@ void cp2130_set_prom_cfg(cp2130_device_t *pCpDev, uint8_t ubBlkIndex,uint8_t *pu
 
 void cp2130_get_usb_cfg(cp2130_device_t *pCpDev, uint16_t *pusVid, uint16_t *pusPid, uint8_t *pubMaxPow, uint8_t *pubPowMode, uint8_t *pubMajorRelease, uint8_t *pubMinorRelease, uint8_t *pubTransferPriority);
 void cp2130_set_usb_cfg(cp2130_device_t *pCpDev, uint16_t usVid, uint16_t usPid, uint8_t ubMaxPow, uint8_t ubPowMode, uint8_t ubMajorRelease, uint8_t ubMinorRelease, uint8_t ubTransferPriority, uint8_t ubMask); // untested
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // __CP2130_H

@@ -17,7 +17,7 @@
  */
 
 #include <time.h>
-#include "mcp2210.h"
+#include "cp2130.h"
 #include "mcp2515.h"
 
 using namespace std;

@@ -2,13 +2,17 @@
 
 #include "cp2130.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 cp2130_device_t *cp2130_init(libusb_context *ctx)
 {
-    printf("\n\rallocating space for cp2130 device...");
+    printf("allocating space for cp2130 device...\r\n");
     cp2130_device_t *pCp2130_dev = (cp2130_device_t *)malloc(sizeof(cp2130_device_t));
     if(!pCp2130_dev)
     {
-        printf("\n\rERROR: cp2130 device space allocation failed.");
+        printf("ERROR: cp2130 device space allocation failed.\r\n");
         return NULL;
     }
 
@@ -16,27 +20,27 @@ cp2130_device_t *cp2130_init(libusb_context *ctx)
     pCp2130_dev->ubKernelAttached = 0;
     pCp2130_dev->usTimeout = 0;
 
-    printf("\n\ropening cp2130 device...");
+    printf("opening cp2130 device...\r\n");
     pCp2130_dev->pDev = libusb_open_device_with_vid_pid(ctx, CP2130_VID, CP2130_PID);
     if(pCp2130_dev->pDev == NULL)
     {
-        printf("\n\rERROR: libusb could not open cp2130 device.");
+        printf("ERROR: libusb could not open cp2130 device.\r\n");
         free(pCp2130_dev);
         return NULL;
     }
 
-    printf("\n\rcp2130 detaching from kernel if attached...");
+    printf("cp2130 detaching from kernel if attached...\r\n");
     if(libusb_kernel_driver_active(pCp2130_dev->pDev, 0) != 0)
     {
-        printf("\n\rcp2130 device was atached to kernel, detaching...");
+        printf("cp2130 device was atached to kernel, detaching...\r\n");
         libusb_detach_kernel_driver(pCp2130_dev->pDev, 0);
         pCp2130_dev->ubKernelAttached = 1;
     }
 
-    printf("\n\rcp2130 device claiming interface...");
+    printf("cp2130 device claiming interface...\r\n");
     if(libusb_claim_interface(pCp2130_dev->pDev, 0) < 0)
     {
-        printf("\n\rERROR: could not claim interface.");
+        printf("ERROR: could not claim interface.\r\n");
         if(pCp2130_dev->ubKernelAttached)
             libusb_attach_kernel_driver(pCp2130_dev->pDev, 0);
 
@@ -45,7 +49,7 @@ cp2130_device_t *cp2130_init(libusb_context *ctx)
         return NULL;
     }
 
-    printf("\n\rcp2130 initialization success...");
+    printf("cp2130 initialization success...\r\n");
     return pCp2130_dev;
 }
 void cp2130_free(cp2130_device_t *pCpDev)
@@ -67,17 +71,17 @@ static void cp2130_control_transfer(cp2130_device_t *pCpDev, uint8_t ubReqType, 
 {
     int32_t ulR = libusb_control_transfer(pCpDev->pDev, ubReqType, ubRequest, usWvalue, usWindex, pubData, usLen, pCpDev->usTimeout);
     if(ulR < 0)
-        printf("\n\rcontrol_transfer failed with return code %d", ulR);
+        printf("control_transfer failed with return code %d\r\n", ulR);
 }
 static void cp2130_bulk_transfer(cp2130_device_t *pCpDev, uint8_t ubEp, uint8_t * pubData, uint32_t ulLen)
 {
     uint32_t ulTransferred;
     uint32_t ulR = libusb_bulk_transfer(pCpDev->pDev, ubEp, pubData, ulLen, (int *)(&ulTransferred), pCpDev->usTimeout);
     if(ulR < 0)
-        printf("\n\rbulk_transfer failed with return code %d", ulR);
+        printf("bulk_transfer failed with return code %d\r\n", ulR);
 
     if(ulTransferred < ulLen)
-        printf("\n\rbulk_transfer failed short: %d bytes of %d requested", ulTransferred, ulLen);
+        printf("bulk_transfer failed short: %d bytes of %d requested\r\n", ulTransferred, ulLen);
 }
 
 // Data Transfer Commands (Bulk Transfers)
@@ -85,7 +89,7 @@ void cp2130_spi_transfer(cp2130_device_t *pCpDev, uint8_t *pubData, uint32_t ulL
 {
     if (ulLen > 120)
     {
-        printf("cannot send more than 120 bytes in transfer, use write or read");
+        printf("cannot send more than 120 bytes in transfer, use write or read\r\n");
         return;
     }
 
@@ -196,11 +200,21 @@ void cp2130_set_clockdiv(cp2130_device_t *pCpDev, uint8_t ubClockDiv)
 
 void cp2130_get_event_counter(cp2130_device_t *pCpDev, uint8_t *pubMode, uint16_t *pusCount)
 {
+    if(!pubMode && !pusCount)
+        return;
+
     uint8_t ubBuf[3] = {0, 0, 0};
+
     cp2130_control_transfer(pCpDev, CP2130_REQ_DEVICE_HOST_VENDOR, CP2130_CMDID_GET_EVNT_CNT, ubBuf, 3, 0, 0);
-    *pubMode = ubBuf[0];
-    *pusCount = (uint16_t)ubBuf[1] << 8;
-    *pusCount |= ubBuf[2];
+
+    if(pubMode)
+        *pubMode = ubBuf[0];
+
+    if(pusCount)
+    {
+        *pusCount = (uint16_t)ubBuf[1] << 8;
+        *pusCount |= ubBuf[2];
+    }
 }
 void cp2130_set_event_counter(cp2130_device_t *pCpDev, uint8_t ubMode, uint16_t usCount)
 {
@@ -257,7 +271,7 @@ void cp2130_set_gpio_mode_level(cp2130_device_t *pCpDev, uint8_t ubIndex, uint8_
     cp2130_control_transfer(pCpDev, CP2130_REQ_HOST_DEVICE_VENDOR, CP2130_CMDID_SET_GPIO_MDLVL, ubBuf, 3, 0, 0);
 }
 
-void cp2130_get_gpio_Values(cp2130_device_t *pCpDev, uint16_t *pusLevel)
+void cp2130_get_gpio_values(cp2130_device_t *pCpDev, uint16_t *pusLevel)
 {
     uint8_t ubBuf[2];
     memset(ubBuf, 0x00, 2);
@@ -265,7 +279,7 @@ void cp2130_get_gpio_Values(cp2130_device_t *pCpDev, uint16_t *pusLevel)
     *pusLevel = ((uint16_t)ubBuf[0] << 8) & 0xFF00;
     *pusLevel |= (uint16_t)ubBuf[1] & 0x00FF;
 }
-void cp2130_set_gpio_Values(cp2130_device_t *pCpDev, uint16_t usLevel, uint16_t usMask)
+void cp2130_set_gpio_values(cp2130_device_t *pCpDev, uint16_t usLevel, uint16_t usMask)
 {
     uint8_t ubBuf[4];
     ubBuf[0] = (uint8_t)(usLevel >> 8);
@@ -349,7 +363,7 @@ void cp2130_set_lock_byte(cp2130_device_t *pCpDev, uint16_t usLock)
     #ifndef CP2130_OTP_ROM_WRITE_PROTECT
     cp2130_control_transfer(pCpDev, CP2130_REQ_HOST_DEVICE_VENDOR, CP2130_CMDID_SET_LOCK_BYTE, ubBuf, 2, 0, 0);
     #else
-    printf("\n\rOTP ROM write protect enabled, ignoring write...");
+    printf("OTP ROM write protect enabled, ignoring write...\r\n");
     #endif
 }
 
@@ -406,7 +420,7 @@ void cp2130_set_manufacturer_string(cp2130_device_t *pCpDev, uint8_t *pubStr)
     cp2130_control_transfer(pCpDev, CP2130_REQ_HOST_DEVICE_VENDOR, CP2130_CMDID_SET_MAN_STR_1, ubCmdBuf1, 64, CP2130_MEM_KEY, 0);
     cp2130_control_transfer(pCpDev, CP2130_REQ_HOST_DEVICE_VENDOR, CP2130_CMDID_SET_MAN_STR_2, ubCmdBuf2, 64, CP2130_MEM_KEY, 0);
     #else
-    printf("\n\rOTP ROM write protect enabled, ignoring write...");
+    printf("OTP ROM write protect enabled, ignoring write...\r\n");
     #endif
 }
 
@@ -463,7 +477,7 @@ void cp2130_set_prod_string(cp2130_device_t *pCpDev, uint8_t *pubStr)
     cp2130_control_transfer(pCpDev, 0x40, CP2130_CMDID_SET_PROD_STR_1, ubData1, 64, CP2130_MEM_KEY, 0);
     cp2130_control_transfer(pCpDev, 0x40, CP2130_CMDID_SET_PROD_STR_2, ubData2, 64, CP2130_MEM_KEY, 0);
     #else
-    printf("\n\rOTP ROM write protect enabled, ignoring write...");
+    printf("OTP ROM write protect enabled, ignoring write...\r\n");
     #endif
 }
 
@@ -504,7 +518,7 @@ void cp2130_set_serial(cp2130_device_t *pCpDev, uint8_t *pubStr)
     #ifndef CP2130_OTP_ROM_WRITE_PROTECT
     cp2130_control_transfer(pCpDev, CP2130_REQ_HOST_DEVICE_VENDOR, CP2130_CMDID_SET_SERIAL_STR, ubCmdBuf, 64, CP2130_MEM_KEY, 0);
     #else
-    printf("\n\rOTP ROM write protect enabled, ignoring write...");
+    printf("OTP ROM write protect enabled, ignoring write...\r\n");
     #endif
 }
 
@@ -517,7 +531,7 @@ void cp2130_set_pin_cfg(cp2130_device_t *pCpDev, uint8_t *pubPinCfg)
     #ifndef CP2130_OTP_ROM_WRITE_PROTECT
     cp2130_control_transfer(pCpDev, CP2130_REQ_HOST_DEVICE_VENDOR, CP2130_CMDID_SET_PIN_CFG, pubPinCfg, 0x0014, 0, 0);
     #else
-    printf("\n\rOTP ROM write protect enabled, ignoring write...");
+    printf("OTP ROM write protect enabled, ignoring write...\r\n");
     #endif
 }
 
@@ -530,7 +544,7 @@ void cp2130_set_prom_cfg(cp2130_device_t *pCpDev, uint8_t ubBlkIndex, uint8_t *p
     #ifndef CP2130_OTP_ROM_WRITE_PROTECT
     cp2130_control_transfer(pCpDev, CP2130_REQ_DEVICE_HOST_VENDOR, CP2130_CMDID_SET_PROM_CFG, pubBlk, 0x0014, CP2130_MEM_KEY, ubBlkIndex);
     #else
-    printf("\n\rOTP ROM write protect enabled, ignoring write...");
+    printf("OTP ROM write protect enabled, ignoring write...\r\n");
     #endif
 }
 
@@ -565,6 +579,10 @@ void cp2130_set_usb_cfg(cp2130_device_t *pCpDev, uint16_t usVid, uint16_t usPid,
     #ifndef CP2130_OTP_ROM_WRITE_PROTECT
     cp2130_control_transfer(pCpDev, CP2130_REQ_HOST_DEVICE_VENDOR, CP2130_CMDID_SET_USB_CFG, ubBuf, 10, CP2130_MEM_KEY, 0);
     #else
-    printf("\n\rOTP ROM write protect enabled, ignoring write...");
+    printf("OTP ROM write protect enabled, ignoring write...\r\n");
     #endif
 }
+
+#ifdef __cplusplus
+}
+#endif

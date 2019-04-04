@@ -24,6 +24,7 @@
 #ifndef _MCP2515_H_
 #define _MCP2515_H_
 
+#include "cp2130.h"
 #include "mcp2515dfs.h"
 #define MAX_CHAR_IN_MESSAGE 8
 
@@ -40,7 +41,7 @@ class MCP_CAN
     uint8_t   m_nfilhit;                                                  // The number of the filter that matched the message
     uint8_t   mcpMode;                                                    // Mode to return to after configurations are performed.
 
-    hid_device *mcp2210handle;
+    cp2130_device_t *m_pSPIDevice;
 
 
 /*********************************************************************************************************
@@ -105,7 +106,7 @@ class MCP_CAN
     uint8_t sendMsg();                                                    // Send message
 
 public:
-    MCP_CAN(hid_device *mcp2210handle);
+    MCP_CAN(cp2130_device_t *pSPIDevice);
     uint8_t begin(uint8_t idmodeset, uint8_t speedset, uint8_t clockset);       // Initialize controller parameters
     uint8_t init_Mask(uint8_t num, uint8_t ext, uint32_t ulData);               // Initialize Mask(s)
     uint8_t init_Mask(uint8_t num, uint32_t ulData);                          // Initialize Mask(s)

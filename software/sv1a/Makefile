@@ -17,7 +17,7 @@ CC = gcc
 CXX = g++
 
 # Compiller flags
-CFLAGS = $(addprefix -I,$(INCLUDEDIRSTRUCT)) -std=gnu11
+CFLAGS = $(addprefix -I,$(INCLUDEDIRSTRUCT)) -std=gnu99
 CXXFLAGS = $(addprefix -I,$(INCLUDEDIRSTRUCT)) -std=gnu++11
 
 LDLIBS = -ludev -lusb-1.0
@@ -43,7 +43,7 @@ TARGET = $(TARGETDIR)/$(APP_NAME)
 all: make-dir $(TARGET)
 
 $(TARGET): $(OBJECTS)
-	@echo Compiling App \'$@\'...
+	@echo Creating executable \'$@\'...
 	@$(CXX) -o $@ $(OBJECTS) $(CXXFLAGS) $(LDLIBS)
 
 $(OBJECTDIR)/%.o: $(SOURCEDIR)/%.c

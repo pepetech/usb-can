@@ -22,7 +22,6 @@
   1301  USA
 */
 
-#include "mcp2210.h"
 #include "mcp2515.h"
 
 /*********************************************************************************************************
@@ -31,30 +30,11 @@
 *********************************************************************************************************/
 void MCP_CAN::mcp2515_reset(void)
 {
-    SPITransferSettingsDef spiSettings;
-
-    spiSettings = GetSPITransferSettings(this->mcp2210handle);
-
-    //chip select is GP0
-    spiSettings.ActiveChipSelectValue = 0xFFFE;
-    spiSettings.IdleChipSelectValue = 0xFFFF;
-    spiSettings.BitRate = 10000000;
-    spiSettings.CSToDataDelay = 1;
-    spiSettings.LastDataByteToCSDelay = 1;
-    spiSettings.BytesPerSPITransfer = 1;
-
-    int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
-
-    if (r != 0) {
-        printf("Errror setting SPI parameters.\n");
-        return;
-    }
-
     uint8_t buf[1];
 
     buf[0] = MCP_RESET;
 
-    SPIDataTransferStatusDef spiTransaction = SPISendReceive(this->mcp2210handle, buf, 1);
+    cp2130_spi_transfer(this->m_pSPIDevice, buf, 1);
 }
 
 /*********************************************************************************************************
@@ -63,34 +43,15 @@ void MCP_CAN::mcp2515_reset(void)
 *********************************************************************************************************/
 uint8_t MCP_CAN::mcp2515_readRegister(const uint8_t address)
 {
-    SPITransferSettingsDef spiSettings;
-
-    spiSettings = GetSPITransferSettings(this->mcp2210handle);
-
-    //chip select is GP0
-    spiSettings.ActiveChipSelectValue = 0xFFFE;
-    spiSettings.IdleChipSelectValue = 0xFFFF;
-    spiSettings.BitRate = 10000000;
-    spiSettings.CSToDataDelay = 1;
-    spiSettings.LastDataByteToCSDelay = 1;
-    spiSettings.BytesPerSPITransfer = 3;
-
-    int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
-
-    if (r != 0) {
-        printf("Errror setting SPI parameters.\n");
-        return 0;
-    }
-
     uint8_t buf[3];
 
     buf[0] = MCP_READ;
     buf[1] = address;
     buf[2] = 0x00;
 
-    SPIDataTransferStatusDef spiTransaction = SPISendReceive(this->mcp2210handle, buf, 3);
+    cp2130_spi_transfer(this->m_pSPIDevice, buf, 3);
 
-    return spiTransaction.DataReceived[2];
+    return buf[2];
 }
 
 /*********************************************************************************************************
@@ -99,25 +60,6 @@ uint8_t MCP_CAN::mcp2515_readRegister(const uint8_t address)
 *********************************************************************************************************/
 void MCP_CAN::mcp2515_readRegisterS(const uint8_t address, uint8_t values[], const uint8_t n)
 {
-    SPITransferSettingsDef spiSettings;
-
-    spiSettings = GetSPITransferSettings(this->mcp2210handle);
-
-    //chip select is GP0
-    spiSettings.ActiveChipSelectValue = 0xFFFE;
-    spiSettings.IdleChipSelectValue = 0xFFFF;
-    spiSettings.BitRate = 10000000;
-    spiSettings.CSToDataDelay = 1;
-    spiSettings.LastDataByteToCSDelay = 1;
-    spiSettings.BytesPerSPITransfer = n + 2;
-
-    int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
-
-    if (r != 0) {
-        printf("Errror setting SPI parameters.\n");
-        return;
-    }
-
     uint8_t *buf = (uint8_t *)malloc(n + 2);
 
     memset(buf, 0, n + 2);
@@ -125,9 +67,9 @@ void MCP_CAN::mcp2515_readRegisterS(const uint8_t address, uint8_t values[], con
     buf[0] = MCP_READ;
     buf[1] = address;
 
-    SPIDataTransferStatusDef spiTransaction = SPISendReceive(this->mcp2210handle, buf, n + 2);
+    cp2130_spi_transfer(this->m_pSPIDevice, buf, n + 2);
 
-    memcpy(values, (void *)((uintptr_t)spiTransaction.DataReceived + 2), n);
+    memcpy(values, (void *)((uintptr_t)buf + 2), n);
 
     free(buf);
 }
@@ -138,32 +80,13 @@ void MCP_CAN::mcp2515_readRegisterS(const uint8_t address, uint8_t values[], con
 *********************************************************************************************************/
 void MCP_CAN::mcp2515_setRegister(const uint8_t address, const uint8_t value)
 {
-    SPITransferSettingsDef spiSettings;
-
-    spiSettings = GetSPITransferSettings(this->mcp2210handle);
-
-    //chip select is GP0
-    spiSettings.ActiveChipSelectValue = 0xFFFE;
-    spiSettings.IdleChipSelectValue = 0xFFFF;
-    spiSettings.BitRate = 10000000;
-    spiSettings.CSToDataDelay = 1;
-    spiSettings.LastDataByteToCSDelay = 1;
-    spiSettings.BytesPerSPITransfer = 3;
-
-    int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
-
-    if (r != 0) {
-        printf("Errror setting SPI parameters.\n");
-        return;
-    }
-
     uint8_t buf[3];
 
     buf[0] = MCP_WRITE;
     buf[1] = address;
     buf[2] = value;
 
-    SPIDataTransferStatusDef spiTransaction = SPISendReceive(this->mcp2210handle, buf, 3);
+    cp2130_spi_transfer(this->m_pSPIDevice, buf, 3);
 }
 
 /*********************************************************************************************************
@@ -172,25 +95,6 @@ void MCP_CAN::mcp2515_setRegister(const uint8_t address, const uint8_t value)
 *********************************************************************************************************/
 void MCP_CAN::mcp2515_setRegisterS(const uint8_t address, const uint8_t values[], const uint8_t n)
 {
-    SPITransferSettingsDef spiSettings;
-
-    spiSettings = GetSPITransferSettings(this->mcp2210handle);
-
-    //chip select is GP0
-    spiSettings.ActiveChipSelectValue = 0xFFFE;
-    spiSettings.IdleChipSelectValue = 0xFFFF;
-    spiSettings.BitRate = 10000000;
-    spiSettings.CSToDataDelay = 1;
-    spiSettings.LastDataByteToCSDelay = 1;
-    spiSettings.BytesPerSPITransfer = n + 2;
-
-    int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
-
-    if (r != 0) {
-        printf("Errror setting SPI parameters.\n");
-        return;
-    }
-
     uint8_t *buf = (uint8_t *)malloc(n + 2);
 
     memset(buf, 0, n + 2);
@@ -200,7 +104,7 @@ void MCP_CAN::mcp2515_setRegisterS(const uint8_t address, const uint8_t values[]
 
     memcpy((void *)((uintptr_t)buf + 2), values, n);
 
-    SPIDataTransferStatusDef spiTransaction = SPISendReceive(this->mcp2210handle, buf, n + 2);
+    cp2130_spi_transfer(this->m_pSPIDevice, buf, n + 2);
 
     free(buf);
 }
@@ -211,25 +115,6 @@ void MCP_CAN::mcp2515_setRegisterS(const uint8_t address, const uint8_t values[]
 *********************************************************************************************************/
 void MCP_CAN::mcp2515_modifyRegister(const uint8_t address, const uint8_t mask, const uint8_t data)
 {
-    SPITransferSettingsDef spiSettings;
-
-    spiSettings = GetSPITransferSettings(this->mcp2210handle);
-
-    //chip select is GP0
-    spiSettings.ActiveChipSelectValue = 0xFFFE;
-    spiSettings.IdleChipSelectValue = 0xFFFF;
-    spiSettings.BitRate = 10000000;
-    spiSettings.CSToDataDelay = 1;
-    spiSettings.LastDataByteToCSDelay = 1;
-    spiSettings.BytesPerSPITransfer = 4;
-
-    int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
-
-    if (r != 0) {
-        printf("Errror setting SPI parameters.\n");
-        return;
-    }
-
     uint8_t buf[4];
 
     buf[0] = MCP_BITMOD;
@@ -237,7 +122,7 @@ void MCP_CAN::mcp2515_modifyRegister(const uint8_t address, const uint8_t mask, 
     buf[2] = mask;
     buf[3] = data;
 
-    SPIDataTransferStatusDef spiTransaction = SPISendReceive(this->mcp2210handle, buf, 4);
+    cp2130_spi_transfer(this->m_pSPIDevice, buf, 4);
 }
 
 /*********************************************************************************************************
@@ -246,33 +131,14 @@ void MCP_CAN::mcp2515_modifyRegister(const uint8_t address, const uint8_t mask, 
 *********************************************************************************************************/
 uint8_t MCP_CAN::mcp2515_readStatus(void)
 {
-    SPITransferSettingsDef spiSettings;
-
-    spiSettings = GetSPITransferSettings(this->mcp2210handle);
-
-    //chip select is GP0
-    spiSettings.ActiveChipSelectValue = 0xFFFE;
-    spiSettings.IdleChipSelectValue = 0xFFFF;
-    spiSettings.BitRate = 10000000;
-    spiSettings.CSToDataDelay = 1;
-    spiSettings.LastDataByteToCSDelay = 1;
-    spiSettings.BytesPerSPITransfer = 2;
-
-    int r = SetSPITransferSettings(this->mcp2210handle, spiSettings);
-
-    if (r != 0) {
-        printf("Errror setting SPI parameters.\n");
-        return 0;
-    }
-
     uint8_t buf[3];
 
     buf[0] = MCP_READ_STATUS;
     buf[1] = 0x00;
 
-    SPIDataTransferStatusDef spiTransaction = SPISendReceive(this->mcp2210handle, buf, 2);
+    cp2130_spi_transfer(this->m_pSPIDevice, buf, 2);
 
-    return spiTransaction.DataReceived[1];
+    return buf[1];
 }
 
 /*********************************************************************************************************
@@ -885,9 +751,9 @@ uint8_t MCP_CAN::mcp2515_getNextFreeTXBuf(uint8_t *txbuf_n)                 /* g
 ** Function name:           MCP_CAN
 ** Descriptions:            Public function to declare CAN class and the /CS pin.
 *********************************************************************************************************/
-MCP_CAN::MCP_CAN(hid_device *mcp2210handle)
+MCP_CAN::MCP_CAN(cp2130_device_t *pSPIDevice)
 {
-    this->mcp2210handle = mcp2210handle;
+    this->m_pSPIDevice = pSPIDevice;
 }
 
 /*********************************************************************************************************
@@ -897,47 +763,6 @@ MCP_CAN::MCP_CAN(hid_device *mcp2210handle)
 uint8_t MCP_CAN::begin(uint8_t idmodeset, uint8_t speedset, uint8_t clockset)
 {
     uint8_t res;
-
-    ChipSettingsDef chipDef;
-
-    //set GPIO pins to be CS
-    chipDef = GetChipSettings(this->mcp2210handle);
-
-    chipDef.GP[0].PinDesignation = GP_PIN_DESIGNATION_CS;
-    chipDef.GP[0].GPIODirection = GPIO_DIRECTION_OUTPUT;
-    chipDef.GP[0].GPIOOutput = 1;
-
-    chipDef.GP[1].PinDesignation = GP_PIN_DESIGNATION_GPIO;
-    chipDef.GP[1].GPIODirection = GPIO_DIRECTION_OUTPUT;
-    chipDef.GP[1].GPIOOutput = 1;
-
-    chipDef.GP[2].PinDesignation = GP_PIN_DESIGNATION_GPIO;
-    chipDef.GP[2].GPIODirection = GPIO_DIRECTION_OUTPUT;
-    chipDef.GP[2].GPIOOutput = 1;
-
-    chipDef.GP[3].PinDesignation = GP_PIN_DESIGNATION_DEDICATED;
-    chipDef.GP[3].GPIODirection = GPIO_DIRECTION_OUTPUT;
-
-    chipDef.GP[4].PinDesignation = GP_PIN_DESIGNATION_GPIO;
-    chipDef.GP[4].GPIODirection = GPIO_DIRECTION_OUTPUT;
-    chipDef.GP[4].GPIOOutput = 1;
-
-    chipDef.GP[5].PinDesignation = GP_PIN_DESIGNATION_DEDICATED;
-    chipDef.GP[5].GPIODirection = GPIO_DIRECTION_OUTPUT;
-
-    chipDef.GP[6].PinDesignation = GP_PIN_DESIGNATION_DEDICATED;
-    chipDef.GP[6].GPIODirection = GPIO_DIRECTION_INPUT;
-
-    chipDef.GP[7].PinDesignation = GP_PIN_DESIGNATION_GPIO;
-    chipDef.GP[7].GPIODirection = GPIO_DIRECTION_INPUT;
-
-    chipDef.GP[8].PinDesignation = GP_PIN_DESIGNATION_GPIO;
-    chipDef.GP[8].GPIODirection = GPIO_DIRECTION_INPUT;
-
-    chipDef.DedicatedFunctionInterruptPinMode = COUNT_FALLING_EDGES;
-    chipDef.SPIBusReleaseMode = 0;
-
-    int r = SetChipSettings(this->mcp2210handle, chipDef);
 
     res = mcp2515_init(idmodeset, speedset, clockset);
     if (res == MCP2515_OK)
