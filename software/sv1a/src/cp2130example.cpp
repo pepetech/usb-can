@@ -52,9 +52,7 @@ int main(void)
 
     // Config GPIOs
     cp2130_set_gpio_mode_level(spi, CP2130_GPIO1, CP2130_GPIO_OUT_PP, CP2130_GPIO_HIGH); // CAN Reset
-
-    // Config Event Counter
-    cp2130_set_event_counter(spi, CP2130_EVNT_CNT_FALLING_EDG, 0); // Falling edge
+    cp2130_set_gpio_mode_level(spi, CP2130_GPIO4, CP2130_GPIO_IN, CP2130_GPIO_HIGH); // CAN Interrupt
 
     // Config Clock Output
     cp2130_set_clockdiv(spi, 3); // 24 MHz / 3 = 8MHz
@@ -91,15 +89,15 @@ int main(void)
 
         int now = time(0);
 
-        if(now - lastTime > 1)
+        if(now - lastTime > 60)
         {
             lastTime = now;
 
-            static int count = 0;
+            static uint8_t count = 0;
 
             printf("Going to write message\r\nHeader: 0x100\r\nBuffer: 0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, 0x%02X\r\n", count);
 
-            uint8_t data[] = {0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, 0x02};
+            uint8_t data[] = {0x55, 0xAA, 0x01, 0x02, 0x55, 0xAA, 0x01, count};
 
             if(can->sendMsgBuf(0x100, 0, 8, data) == CAN_OK)
                 printf("Send ok!\r\n");
@@ -110,15 +108,11 @@ int main(void)
             else count++;
         }
 
-        uint16_t intcnt;
+        uint16_t gpioval;
 
-        cp2130_get_event_counter(spi, NULL, &intcnt);
-        cp2130_set_event_counter(spi, CP2130_EVNT_CNT_FALLING_EDG, 0); // Zero counter
+        cp2130_get_gpio_values(spi, &gpioval);
 
-        if(intcnt)
-            printf("Event count: %hu\r\n", intcnt);
-
-        while(intcnt--)
+        while(!(gpioval & CP2130_GPIO4_MSK))
         {
             printf("Going to read message\r\n");
 
@@ -141,6 +135,8 @@ int main(void)
             {
                 printf("receive fail!\r\n");
             }
+
+            cp2130_get_gpio_values(spi, &gpioval);
         }
     }
 
