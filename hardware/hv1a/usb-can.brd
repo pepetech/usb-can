@@ -194,7 +194,7 @@
 <wire x1="30" y1="21.2" x2="29.2" y2="22" width="0" layer="20" curve="90"/>
 <wire x1="29.2" y1="22" x2="0.8" y2="22" width="0" layer="20"/>
 <wire x1="0.8" y1="22" x2="0" y2="21.2" width="0" layer="20" curve="90"/>
-<text x="25.3" y="1" size="0.6096" layer="22" rot="MR0">Designed and assembled in Portugal</text>
+<text x="15" y="1" size="0.6096" layer="22" rot="MR0" align="center">Designed and assembled in Portugal</text>
 <text x="7.1" y="19.1" size="0.6096" layer="22" rot="MR0">USB-CAN v1a
 Apr 2019</text>
 </plain>
