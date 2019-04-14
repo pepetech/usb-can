@@ -12,6 +12,8 @@
 *.a
 *~
 
+ipch
+
 build
 dist
 doxygen
